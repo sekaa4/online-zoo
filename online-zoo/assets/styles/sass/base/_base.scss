@@ -1,0 +1,8 @@
+html {
+	font-size: 10px;
+	@extend %font-main;
+}
+
+body {
+	@include font(1.6rem, 14rem);
+}
