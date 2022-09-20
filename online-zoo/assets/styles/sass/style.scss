@@ -6,6 +6,19 @@
 //base
 @import "base/normalize";
 @import "base/base";
+@import "base/buttons";
+@import "base/icons";
+@import "base/logo";
+
+//components
+@import "components/promo";
+@import "components/intro";
+
+//layout
+@import "layout/wrapper";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/columns";
 
 //pages
 @import "pages/main";

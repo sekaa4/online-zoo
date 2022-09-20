@@ -1,0 +1,12 @@
+.logo {
+	@include font($size: 1.9rem, $height: 1.2);
+	box-sizing: border-box;
+	width: 8.2rem;
+	height: 5.2rem;
+	border: 1px solid $color-white;
+	border-radius: 0.2rem;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

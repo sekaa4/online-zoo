@@ -1,0 +1,42 @@
+.intro {
+	background-image: url("../../assets/images/first-section/Giant Panda.png");
+	background-size: 100% 100%;
+	height: 78rem;
+}
+
+.intro__wrapper {
+	position: relative;
+	height: 70rem;
+}
+
+.intro__eclips {
+	width: 46.5rem;
+	height: 46.5rem;
+	position: absolute;
+	right: 10.8rem;
+	bottom: 22.3rem;
+	z-index: 1;
+}
+
+.intro__text {
+	position: absolute;
+	@include font($size: 10.65rem, $height: 0.75, $weight: 700);
+	color: $color-white;
+	width: 50rem;
+	height: 40rem;
+	text-align: center;
+	text-transform: uppercase;
+	bottom: 21.4rem;
+	right: 0;
+	z-index: 2;
+	.text-color {
+		display: block;
+		color: #ffee2e;
+	}
+}
+
+.intro__button {
+	position: absolute;
+	bottom: 10rem;
+	right: 10rem;
+}

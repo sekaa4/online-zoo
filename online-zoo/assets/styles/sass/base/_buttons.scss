@@ -1,0 +1,15 @@
+.button {
+	@include font($size: 1.6rem, $height: 1.4, $weight: 500);
+	width: 29.8rem;
+	height: 5.4rem;
+	color: $color-white;
+	padding: 16px 5px 16px 1px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.button-first {
+	background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+	border-radius: 2.5rem;
+	border-width: 0;
+}
