@@ -19,12 +19,8 @@
 		text-decoration: none;
 		color: $color-white;
 	}
-	a:hover {
-		background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		text-fill-color: transparent;
+	a.navigation__link_color:visited {
+		color: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
 	}
 }
 
@@ -32,11 +28,6 @@
 	position: absolute;
 	bottom: 0.8rem;
 	right: 5.9rem;
-}
-
-.logo-text {
-	width: 7.25rem;
-	height: 4.5rem;
 }
 
 .navigation {

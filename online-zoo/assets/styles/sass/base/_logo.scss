@@ -1,5 +1,4 @@
 .logo {
-	@include font($size: 1.9rem, $height: 1.2);
 	box-sizing: border-box;
 	width: 8.2rem;
 	height: 5.2rem;
@@ -9,4 +8,10 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+h1.logo-text {
+	@include font($size: 1.9rem, $height: 1.2);
+	width: 7.25rem;
+	height: 4.5rem;
 }

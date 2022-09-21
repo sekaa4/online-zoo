@@ -330,7 +330,6 @@ h1 {
   line-height: 0.8;
   font-weight: 700;
   font-style: normal;
-  display: none;
 }
 
 h2 {
@@ -374,10 +373,6 @@ p {
 }
 
 .logo {
-  font-size: 1.9rem;
-  line-height: 1.2;
-  font-weight: 400;
-  font-style: normal;
   box-sizing: border-box;
   width: 8.2rem;
   height: 5.2rem;
@@ -387,6 +382,15 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+h1.logo-text {
+  font-size: 1.9rem;
+  line-height: 1.2;
+  font-weight: 400;
+  font-style: normal;
+  width: 7.25rem;
+  height: 4.5rem;
 }
 
 .intro {
@@ -462,23 +466,14 @@ p {
   text-decoration: none;
   color: #ffffff;
 }
-.header__logo a:hover {
-  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+.header__logo a.navigation__link_color:visited {
+  color: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
 }
 
 .bamboo-header {
   position: absolute;
   bottom: 0.8rem;
   right: 5.9rem;
-}
-
-.logo-text {
-  width: 7.25rem;
-  height: 4.5rem;
 }
 
 .navigation {
