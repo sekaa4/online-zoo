@@ -322,6 +322,9 @@ body {
   line-height: 1.4;
   font-weight: 500;
   font-style: normal;
+  background-color: #ffffff;
+}
+body > * {
   box-sizing: border-box;
 }
 
@@ -337,6 +340,8 @@ h2 {
   line-height: 1.2;
   font-weight: 400;
   font-style: normal;
+  margin: 0;
+  padding: 0;
 }
 
 h3 {
@@ -344,6 +349,16 @@ h3 {
   line-height: 1.3;
   font-weight: 400;
   font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  font-size: 2.4rem;
+  line-height: 1.2;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
 }
 
 p {
@@ -351,6 +366,7 @@ p {
   line-height: 1.2;
   font-weight: 300;
   font-style: normal;
+  margin: 0;
 }
 
 .button {
@@ -369,6 +385,21 @@ p {
 .button-first {
   background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
   border-radius: 2.5rem;
+  border-width: 0;
+}
+
+.button-nav {
+  position: absolute;
+  display: inline-block;
+  height: 62px;
+  width: 62px;
+  background: url("../../assets/icons/arrow_elips_left.svg");
+  top: 50%;
+}
+
+.button_length {
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  border-radius: 25px;
   border-width: 0;
 }
 
@@ -393,50 +424,8 @@ h1.logo-text {
   height: 4.5rem;
 }
 
-.intro {
-  background-image: url("../../assets/images/first-section/Giant Panda.png");
-  background-size: 100% 100%;
-  height: 78rem;
-}
-
-.intro__wrapper {
-  position: relative;
-  height: 70rem;
-}
-
-.intro__eclips {
-  width: 46.5rem;
-  height: 46.5rem;
-  position: absolute;
-  right: 10.8rem;
-  bottom: 22.3rem;
-  z-index: 1;
-}
-
-.intro__text {
-  position: absolute;
-  font-size: 10.65rem;
-  line-height: 0.75;
-  font-weight: 700;
-  font-style: normal;
-  color: #ffffff;
-  width: 50rem;
-  height: 40rem;
-  text-align: center;
-  text-transform: uppercase;
-  bottom: 21.4rem;
-  right: 0;
-  z-index: 2;
-}
-.intro__text .text-color {
-  display: block;
-  color: #ffee2e;
-}
-
-.intro__button {
-  position: absolute;
-  bottom: 10rem;
-  right: 10rem;
+.promo__flower {
+  height: 60.5rem;
 }
 
 .wrapper {
@@ -513,6 +502,287 @@ h1.logo-text {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+}
+
+.layout-3-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.layout-3-column > * {
+  flex-basis: 366px;
+}
+
+.layout-2-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.layout-2-column > * {
+  flex-basis: 800px;
+}
+
+.layout-3-column-nav {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.layout-5-column {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+.layout-5-column > .feed__step {
+  flex-basis: 16.8rem;
+}
+.layout-5-column > .feed__ {
+  flex-basis: 6.9rem;
+}
+
+.promo {
+  margin: 12px 0 106px 0;
+  background-image: url("../../assets/images/second-section/flower_foto1.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 60.5rem;
+}
+
+.promo__wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  height: 40.3rem;
+  width: 116rem;
+  padding: 128px 0 0;
+}
+
+.promo__content {
+  height: 40.3rem;
+  width: 46.5rem;
+}
+
+.promo__title {
+  margin: 0;
+  padding: 0 0 10px;
+}
+
+.promo__text {
+  display: block;
+  font-size: 1.6rem;
+  line-height: 1.3;
+  font-weight: 400;
+  font-style: normal;
+  padding: 10px 0 27px 0;
+}
+
+.promo__subtitle {
+  padding: 27px 0 17px 0;
+}
+
+.promo__text-subtitle {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  font-weight: 400;
+  font-style: normal;
+  display: block;
+  padding: 17px 0 0 0;
+}
+
+.promo__image {
+  height: 40.3rem;
+}
+
+.intro {
+  background-image: url("../../assets/images/first-section/Giant Panda.png");
+  background-size: 100% 100%;
+  height: 78rem;
+}
+
+.intro__wrapper {
+  position: relative;
+  height: 70rem;
+}
+
+.intro__eclips {
+  width: 46.5rem;
+  height: 46.5rem;
+  position: absolute;
+  right: 10.8rem;
+  bottom: 22.3rem;
+  z-index: 1;
+}
+
+.intro__text {
+  position: absolute;
+  font-size: 10.65rem;
+  line-height: 0.75;
+  font-weight: 700;
+  font-style: normal;
+  color: #ffffff;
+  width: 50rem;
+  height: 40rem;
+  text-align: center;
+  text-transform: uppercase;
+  bottom: 21.4rem;
+  right: 0;
+  z-index: 2;
+}
+.intro__text .text-color {
+  display: block;
+  color: #ffee2e;
+}
+
+.intro__button {
+  position: absolute;
+  bottom: 10rem;
+  right: 10rem;
+}
+
+.animal {
+  box-sizing: border-box;
+  display: block;
+  width: 366px;
+  height: 426px;
+  border: 1px solid #f9804b;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.animal .animals__image {
+  transition: all 1s;
+}
+.animal .animals__image:hover {
+  transform: scale(1.1);
+}
+
+.animals-card {
+  height: 110.6rem;
+  background: url("../../assets/images/Third-section/palm_foto.png") bottom left, url("../../assets/images/Third-section/strelitzia 1.png") bottom right;
+  background-repeat: no-repeat;
+}
+
+.animals-card__wrapper {
+  width: 1158px;
+  height: 872px;
+}
+
+.animals-card-wrapper {
+  height: 872px;
+}
+
+.animal__content {
+  margin-left: 16px;
+}
+
+.animal__title {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.eat__image {
+  position: absolute;
+  bottom: 13px;
+  right: 12px;
+}
+
+.animals-card-button {
+  padding: 80px 0 100px 0;
+}
+
+.animals-card__button {
+  background: #fe9013;
+  border-radius: 2.5rem;
+  border-width: 0;
+}
+
+.animals-card__navigation-wrapper {
+  position: relative;
+}
+
+.feed {
+  background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #febdab 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
+  opacity: 0.9;
+  height: 100.4rem;
+  padding-top: 69px;
+  padding-bottom: 100px;
+}
+.feed__wrapper {
+  box-sizing: border-box;
+  background: rgba(253, 253, 255, 0.52);
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  padding: 41px 0 59px 0;
+  height: 83.5rem;
+}
+
+.feed__title {
+  margin-top: 0;
+  text-align: center;
+  color: #fe9013;
+  height: 5.8rem;
+}
+
+.feed__subtitle {
+  display: block;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  font-weight: 400;
+  font-style: normal;
+  margin: 30px 0px 40px 99px;
+  color: #333b41;
+  height: 2.9rem;
+}
+
+.feed__text_body {
+  font-size: 1.6rem;
+  line-height: 1.3;
+  font-weight: 500;
+  font-style: normal;
+  color: #333b41;
+  margin-left: 99px;
+  height: 2.1rem;
+}
+
+.feed__text_paragraph {
+  font-size: 1.6rem;
+  line-height: 1.3;
+  font-weight: 400;
+  font-style: normal;
+  color: #333b41;
+  margin: 10px 0 60px 99px;
+  width: 86.3rem;
+  height: 4.2rem;
+}
+
+.feed__name {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.feed__button {
+  margin: auto;
+  width: 29.8rem;
+  margin-top: 60px;
+}
+
+.feed__text-decoration {
+  padding-bottom: 1px;
+  border-bottom: 1px solid #fe9013;
+}
+
+.feed__step {
+  width: 16.8rem;
+  height: 24.4rem;
+}
+
+.feed__arrow {
+  width: 6.9rem;
+  height: 3.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

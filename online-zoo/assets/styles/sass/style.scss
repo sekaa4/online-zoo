@@ -9,16 +9,19 @@
 @import "base/buttons";
 @import "base/icons";
 @import "base/logo";
-
-//components
-@import "components/promo";
-@import "components/intro";
+@import "base/flowers";
 
 //layout
 @import "layout/wrapper";
 @import "layout/header";
 @import "layout/footer";
 @import "layout/columns";
+
+//components
+@import "components/promo";
+@import "components/intro";
+@import "components/animals-cards";
+@import "components/feed";
 
 //pages
 @import "pages/main";

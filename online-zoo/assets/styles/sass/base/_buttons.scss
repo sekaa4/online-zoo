@@ -13,3 +13,18 @@
 	border-radius: 2.5rem;
 	border-width: 0;
 }
+
+.button-nav {
+	position: absolute;
+	display: inline-block;
+	height: 62px;
+	width: 62px;
+	background: url("../../assets/icons/arrow_elips_left.svg");
+	top: 50%;
+}
+
+.button_length {
+	background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+	border-radius: 25px;
+	border-width: 0;
+}

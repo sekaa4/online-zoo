@@ -1,0 +1,26 @@
+.layout-3-column {
+	@include columns($width: 366px);
+	align-content: space-between;
+}
+
+.layout-2-column {
+	@include columns($width: 800px);
+}
+
+.layout-3-column-nav {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+.layout-5-column {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-around;
+	> .feed__step {
+		flex-basis: 16.8rem;
+	}
+	> .feed__ {
+		flex-basis: 6.9rem;
+	}
+}
