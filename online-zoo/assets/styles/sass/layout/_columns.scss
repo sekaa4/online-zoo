@@ -20,7 +20,10 @@
 	> .feed__step {
 		flex-basis: 16.8rem;
 	}
-	> .feed__ {
-		flex-basis: 6.9rem;
+	> .feed__arrow {
+		display: inline-flex;
+		align-items: center;
+		height: 170px;
+		margin: 0 31px 0 30px;
 	}
 }

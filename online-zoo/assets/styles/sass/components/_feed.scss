@@ -35,6 +35,10 @@
 	}
 }
 
+.feeds-container {
+	justify-content: center;
+}
+
 .feed__title {
 	margin-top: 0;
 	text-align: center;
@@ -87,6 +91,14 @@
 }
 
 .feed__arrow {
-	width: 6.9rem;
-	height: 3.5rem;
+	width: 69px;
+	height: 36px;
+}
+
+.feed__step-text {
+	@include font($size: 1.6rem, $height: 1.4, $weight: 400);
+	margin-top: 30px;
+	display: inline-block;
+	width: 168px;
+	height: 46px;
 }

@@ -1,0 +1,44 @@
+.ico {
+	cursor: pointer;
+	display: inline-block;
+}
+
+.ico-squire {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 168px;
+	height: 168px;
+	border: 1px solid transparent; //Обводка нужной толщины, но прозрачная
+	background: linear-gradient(113.96deg, #f9804b 100%, #fe9013 100%); //Нужный градиент в качестве фона
+	box-shadow: inset 0px 0px 0px 100vw $color-white; //Тень направленная внутрь контейнера, перекрывает ненужный фон и оставляет только рамку
+	border-radius: 5px;
+}
+
+.ico_pay {
+	width: 108px;
+	height: 60px;
+	background-image: url("../../assets/icons/pay.svg");
+}
+
+.ico_zoo {
+	width: 86px;
+	height: 95px;
+	background-image: url("../../assets/icons/zoo.svg");
+}
+
+.ico_monkey {
+	width: 125px;
+	height: 72px;
+	background-image: url("../../assets/icons/monkey.svg");
+}
+
+.ico-arrow {
+	display: inline-block;
+	width: 69px;
+	height: 36px;
+	// background: #333b41;
+	// border: 0.5px solid #333b41;
+	// transform: matrix(-1, 0, 0, 1, 0, 0);
+	background-image: url("../../assets/icons/arrow-big.svg");
+}
