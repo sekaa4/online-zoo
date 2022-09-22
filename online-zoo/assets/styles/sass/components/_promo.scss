@@ -1,5 +1,5 @@
 .promo {
-	margin: 12px 0 106px 0;
+	margin: 0 0 106px 0;
 	background-image: url("../../assets/images/second-section/flower_foto1.png");
 	background-repeat: no-repeat;
 	background-position: right;
@@ -22,24 +22,38 @@
 }
 
 .promo__title {
-	margin: 0;
-	padding: 0 0 10px;
+	height: 116px;
+	width: 465px;
+	margin-bottom: 20px;
+	padding: 0;
+	color: #333b41;
 }
 
 .promo__text {
+	color: #333b41;
+	height: 42px;
+	width: 465px;
 	display: block;
 	@include font(1.6rem, 1.3, 400);
-	padding: 10px 0 27px 0;
+	padding: 0;
+	margin-bottom: 54px;
 }
 
 .promo__subtitle {
-	padding: 27px 0 17px 0;
+	color: #333b41;
+	width: 217px;
+	height: 29px;
+	padding: 0;
+	margin-bottom: 34px;
 }
 
 .promo__text-subtitle {
+	color: #333b41;
+	height: 105px;
+	width: 465px;
 	@include font(1.6rem, 1.4, 400);
 	display: block;
-	padding: 17px 0 0 0;
+	padding: 0;
 }
 
 .promo__image {

@@ -1,0 +1,158 @@
+.testimonials {
+	height: 91.9rem;
+	padding-top: 140px;
+	position: relative;
+	overflow: hidden;
+	&__image {
+		position: absolute;
+		bottom: -132px;
+		right: 0;
+		background: url("../../assets/images/fifth-section/leav_foto.png");
+		width: 247px;
+		height: 408px;
+		background-repeat: no-repeat;
+		margin: 0;
+	}
+}
+
+.testimonials__wrapper {
+	height: 57.5rem;
+}
+
+.testimonials__title {
+	width: 206px;
+	height: 47px;
+	margin: auto;
+	margin-bottom: 47px;
+}
+
+.testimonials-wrapper {
+	//margin-bottom: 21px;
+	height: 391px;
+}
+
+.testimonial__line {
+	line-height: 0;
+	margin-top: 21px;
+	margin-left: 280px;
+}
+
+.testimonial {
+	box-sizing: border-box;
+	height: 391px;
+	border: 2px solid transparent; //Обводка нужной толщины, но прозрачная
+	background: linear-gradient(
+			315.75deg,
+			rgba(254, 189, 171, 0.74) 30.06%,
+			rgba(243, 169, 248, 0.66) 50.74%,
+			#e0d8f0 80.49%,
+			#eaf7fe 127.9%,
+			#eaf7fe 149.54%
+		),
+		linear-gradient(
+			315.75deg,
+			rgba(254, 189, 171, 0.74) 30.06%,
+			rgba(243, 169, 248, 0.66) 50.74%,
+			#e0d8f0 80.49%,
+			#eaf7fe 127.9%,
+			#eaf7fe 149.54%
+		); //Нужный градиент в качестве фона
+	box-shadow: inset 0px 0px 0px 100vw #f1f3f2; //Тень направленная внутрь контейнера, перекрывает ненужный фон и оставляет только рамку
+	border-radius: 20px;
+	padding: 14px 15px 19px 14px;
+}
+
+.testimonial__content {
+	display: flex;
+	justify-content: start;
+}
+
+.testimonial-avatar {
+	display: inline-block;
+	width: 37px;
+	height: 37px;
+	margin-right: 10px;
+}
+
+.testimonial-avatar_1 {
+	display: inline-block;
+	width: 37px;
+	height: 37px;
+	background-image: url("../../assets/icons/user_icon_anon.png");
+}
+
+.testimonial-avatar_2 {
+	display: inline-block;
+	width: 37px;
+	height: 37px;
+	background-image: url("../../assets/icons/user_icon_oscar.png");
+}
+
+.testimonial-avatar_3 {
+	display: inline-block;
+	width: 37px;
+	height: 37px;
+	background-image: url("../../assets/icons/user_icon_frederica.png");
+}
+
+.testimonial-avatar_4 {
+	display: inline-block;
+	width: 37px;
+	height: 37px;
+	background-image: url("../../assets/icons/user_icon_mila.png");
+}
+
+.testimonial__header {
+	height: 38px;
+}
+
+.testimonial__title {
+	height: 19px;
+	display: block;
+	color: black;
+	@include font($size: 1.6rem, $height: 1.2, $weight: 400);
+}
+
+.testimonial__description {
+	@include font($size: 1.5rem, $height: 1.2, $weight: 300);
+	color: #bdbdbd;
+	margin-top: 1px;
+	height: 18px;
+}
+
+.testimonial_1,
+.testimonial_2 {
+	width: 268px;
+}
+
+.testimonial_3 {
+	width: 267px;
+}
+
+.testimonial_4 {
+	width: 266px;
+}
+
+.testimonial__text {
+	@include font($size: 1.5rem, $height: 1.2, $weight: 300);
+	box-sizing: border-box;
+	overflow: hidden;
+	width: 237px;
+	height: 309px;
+	color: #767474;
+	margin-top: 10px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.testimonial__dot {
+	width: 5px;
+	height: 18px;
+	margin: 0 5px 0 6px;
+}
+
+.testimonial__button {
+	height: 54px;
+	width: 298px;
+	margin: 31px 100% 0 auto;
+}

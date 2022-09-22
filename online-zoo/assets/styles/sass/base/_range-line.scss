@@ -1,0 +1,61 @@
+input[type="range"].range-line {
+	box-sizing: border-box;
+	display: inline-block;
+	position: relative;
+	width: 599px;
+	height: 8px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+/* The slider itself */
+.slider {
+	-webkit-appearance: none; /* Override default CSS styles */
+	appearance: none;
+	border: 0.5px solid transparent; //Обводка нужной толщины, но прозрачная
+	background: linear-gradient(
+			315.75deg,
+			rgba(254, 189, 171, 0.74) 30.06%,
+			rgba(243, 169, 248, 0.66) 50.74%,
+			#e0d8f0 80.49%,
+			#eaf7fe 127.9%,
+			#eaf7fe 149.54%
+		),
+		linear-gradient(
+			315.75deg,
+			rgba(254, 189, 171, 0.74) 30.06%,
+			rgba(243, 169, 248, 0.66) 50.74%,
+			#e0d8f0 80.49%,
+			#eaf7fe 127.9%,
+			#eaf7fe 149.54%
+		); //Нужный градиент в качестве фона
+	box-shadow: inset 0px 0px 0px 100vw #f5f7f6; //Тень направленная внутрь контейнера, перекрывает ненужный фон и оставляет только рамку
+	//background: #f5f7f6; /* background */
+	outline: none; /* Remove outline */
+	//opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+	-webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+	transition: opacity 0.2s;
+}
+
+/* Mouse-over effects */
+// .slider:hover {
+// 	opacity: 1; /* Fully shown on mouse-over */
+// }
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none; /* Override default look */
+	appearance: none;
+	width: 116px; /* Set a specific slider handle width */
+	height: 6px; /* Slider handle height */
+	background: #fe9013; /* Green background */
+	border-radius: 5px;
+	cursor: pointer; /* Cursor on hover */
+}
+
+// .slider::-moz-range-thumb {
+// 	width: 25px; /* Set a specific slider handle width */
+// 	height: 25px; /* Slider handle height */
+// 	background: #4caf50; /* Green background */
+// 	cursor: pointer; /* Cursor on hover */
+// }

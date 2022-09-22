@@ -19,9 +19,6 @@
 		text-decoration: none;
 		color: $color-white;
 	}
-	a.navigation__link_color:visited {
-		color: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
-	}
 }
 
 .bamboo-header {
@@ -41,23 +38,40 @@
 	a {
 		text-decoration: none;
 		color: $color-white;
+		// -webkit-background-clip: text;
+		// -webkit-text-fill-color: transparent;
 	}
+
+	a:visited {
+		color: #f9804b;
+		// background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+		// -webkit-background-clip: text;
+		// -webkit-text-fill-color: transparent;
+	}
+
 	a:hover {
 		background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		text-fill-color: transparent;
 	}
 	&:first-child {
 		padding-left: 6.3rem;
 	}
 }
 
+.navigation__link_color {
+	pointer-events: none;
+	background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
 .header__designed {
 	a {
 		text-decoration: none;
-		color: $color-white;
+		background: $color-white;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 	a:hover {
 		background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
