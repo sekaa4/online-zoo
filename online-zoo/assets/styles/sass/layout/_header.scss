@@ -14,7 +14,7 @@
 
 .header__logo {
 	position: relative;
-	padding: 0;
+	padding: 3.55px 4.55px;
 	a {
 		text-decoration: none;
 		color: $color-white;
@@ -43,7 +43,7 @@
 	}
 
 	a:visited {
-		color: #f9804b;
+		color: #fe9013;
 		// background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
 		// -webkit-background-clip: text;
 		// -webkit-text-fill-color: transparent;

@@ -7,11 +7,24 @@
 	text-align: center;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	&:hover {
+		background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		text-fill-color: transparent;
+
+		.bamboo {
+			fill: green;
+		}
+	}
 }
 
-h1.logo-text {
+.logo-text {
 	@include font($size: 1.9rem, $height: 1.2);
-	width: 7.25rem;
-	height: 4.5rem;
+	display: block;
+	> a {
+		width: 7.25rem;
+		height: 4.5rem;
+	}
 }

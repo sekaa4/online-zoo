@@ -6,13 +6,18 @@ body {
 	@extend %font-main;
 	@include font(1.6rem, 1.4, 500);
 	background-color: $color-white;
-	> * {
-		box-sizing: border-box;
-	}
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
 h1 {
 	@include font(11.4rem, 0.8, 700);
+	margin: 0;
+	padding: 0;
 }
 
 h2 {
@@ -36,4 +41,12 @@ p {
 	@include font(1.5rem, 1.2, 300);
 	margin: 0;
 	padding: 0;
+}
+
+ul {
+	margin: 0;
+}
+
+.subtitle {
+	@include font(2.4rem, 1.2);
 }

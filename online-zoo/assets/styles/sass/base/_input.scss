@@ -1,0 +1,8 @@
+.input {
+	color: #bdbdbd;
+	@include font(1.6rem, 1.4, 300);
+	width: 228px;
+	height: 42px;
+	padding: 0;
+	box-sizing: border-box;
+}

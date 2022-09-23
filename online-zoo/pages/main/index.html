@@ -5,11 +5,11 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./fonts.css">
-	<link rel="stylesheet" href="./style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../../assets/styles/fonts.css">
+	<link rel="stylesheet" href="./style.css">
 	<title>Online-Zoo</title>
 </head>
 
@@ -18,7 +18,7 @@
 		<header class="header">
 			<div class="wrapper header__wrapper">
 				<div class="logo header__logo">
-					<object class="bamboo bamboo-header" data="../../assets/icons/bamboo.svg" type="image/svg+xml"></object>
+					<object class="bamboo-header" data="../../assets/icons/bamboo.svg" type="image/svg+xml"></object>
 					<h1 class="logo-text"><a href="./index.html">PetStory online</a></h1>
 				</div>
 				<nav class="header__navigation">
@@ -33,7 +33,7 @@
 							<a href="#">Zoos</a>
 						</li>
 						<li class="navigation__link">
-							<a href="#">Donate</a>
+							<a href="../donate/index.html">Donate</a>
 						</li>
 						<li class="navigation__link">
 							<a href="#">Contact us</a>
@@ -175,7 +175,7 @@
 				</span>
 			</div>
 		</div>
-		<div class="animals-card-button button wrapper ">
+		<div class="animals-card-button wrapper ">
 			<button class="animals-card__button button">Choose your favorite</button>
 		</div>
 	</section>
@@ -339,52 +339,64 @@
 	</section>
 	<footer class="footer">
 		<div class="wrapper footer__wrapper">
-			<div class="layout-2-column footer-block">
+			<div class="layout-2-column footer__block">
 				<div class="footer__logo">
-					<a href="#" class="logo">
-						<object data="../../assets/images/logo_footer.svg" type="image/svg+xml"></object>
-					</a>
+					<object class="bamboo_footer" data="../../assets/icons/bamboo.svg" type="image/svg+xml"></object>
+					<span class="logo-text"><a href="./index.html">PetStory online</a></span>
 				</div>
-				<div class="footer__subscribe">
-					<p class="subtitle">Subscribe to our news</p>
-					<input type="email" name="email" class="input" value="Enter your email">
-					<button type="submit" class="button button_bordered">Submit</button>
+				<div class="footer__button">
+					<button class="button button_long">DONATE FOR VOLUNTEERS</button>
 				</div>
 			</div>
-			<div class="footer__button">
-				<button class="button button_long">DONATE FOR VOLUNTEERS</button>
+			<div class="footer__subscribe">
+				<form action="" method="post">
+					<span class="subtitle subtitle_text">Subscribe to our news</span>
+					<input type="email" name="email" class="input input_footer" placeholder="Enter your email">
+					<button type="submit" class="button_bordered">Submit</button>
+				</form>
 			</div>
-			<div class="layout-3-column footer-container">
-				<div class="footer__social">
-					<a class="social" href="#">
-						<span class="social__ico"></span>
-						Facebook
-					</a>
-					<a class="social" href="#">
-						<span class="social__ico"></span>
-						Twitter
-					</a>
-					<a class="social" href="#">
-						<span class="social__ico"></span>
-						Instagram
-					</a>
-					<a class="social" href="#">
-						<span class="social__ico"></span>
-						Youtube
-					</a>
-				</div>
-				<div class="footer-navigation">
-					<ul class="footer-navigation__links">
-						<li class="link-color"><a href="#">About</a></li>
-						<li><a href="#">Map</a></li>
-						<li><a href="#">Zoos</a></li>
-						<li><a href="#">Contact us</a></li>
-					</ul>
-				</div>
-				<div class="footer__creater">
-					<p class="footer__designed">Designed by Alisa Samborskaya</p>
-					<p class="footer__designed">©RSSchool & ©Yem Digital 2021</p>
-				</div>
+			<div class="footer__social">
+				<a class="social" href="https://www.facebook.com/">
+					<span class="social__ico_1"></span>
+					<span class="link-social__text">Facebook</span>
+				</a>
+				<a class="social" href="https://www.twitter.com/">
+					<span class="social__ico_2"></span>
+					<span class="link-social__text">Twitter</span>
+
+				</a>
+				<a class="social" href="https://www.instagram.com/">
+					<span class="social__ico_3"></span>
+					<span class="link-social__text">Instagram</span>
+
+				</a>
+				<a class="social" href="https://www.youtube.com/">
+					<span class="social__ico_4"></span>
+					<span class="link-social__text">YouTube</span>
+
+				</a>
+			</div>
+			<div class="footer-navigation">
+				<ul class="navigation footer__navigation footer__navigation_link">
+					<li class="navigation__link">
+						<a class="navigation__link_color" href="./index.html" target="blank">About</a>
+					</li>
+					<li class="navigation__link">
+						<a href="">Map</a>
+					</li>
+					<li class="navigation__link">
+						<a href="">Zoos</a>
+					</li>
+					<li class="navigation__link">
+						<a href="#">Contact us</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__creator">
+				<a href="https://www.rs.school/" target="blank">
+					<span class="footer__designed">Designed by Alisa Samborskaya</span>
+					<span class="footer__designed">©RSSchool & ©Yem Digital 2021</span>
+				</a>
 			</div>
 		</div>
 	</footer>

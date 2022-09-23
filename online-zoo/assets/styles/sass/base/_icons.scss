@@ -42,3 +42,38 @@
 	// transform: matrix(-1, 0, 0, 1, 0, 0);
 	background-image: url("../../assets/icons/arrow-big.svg");
 }
+
+.social__ico_1 {
+	margin-right: 12px;
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	background: url("../../assets/icons/facebook.png") center center, url("../../assets/icons/Ellipse_soc.png");
+	background-repeat: no-repeat;
+}
+
+.social__ico_2 {
+	margin-right: 12px;
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	background: url("../../assets/icons/twitter.png") center center, url("../../assets/icons/Ellipse_soc.png");
+	background-repeat: no-repeat;
+}
+
+.social__ico_3 {
+	margin-right: 12px;
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	background: url("../../assets/icons/instagram.png") center center, url("../../assets/icons/Ellipse_soc.png");
+	background-repeat: no-repeat;
+}
+
+.social__ico_4 {
+	margin-right: 12px;
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	background: url("../../assets/icons/youtube.png") center center no-repeat, url("../../assets/icons/Ellipse_soc.png");
+}

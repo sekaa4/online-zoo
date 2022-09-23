@@ -11,16 +11,18 @@
 @import "base/logo";
 @import "base/flowers";
 @import "base/range-line";
+@import "base/input";
+@import "base/socials";
 
 //layout
+@import "layout/columns";
 @import "layout/wrapper";
 @import "layout/header";
 @import "layout/footer";
-@import "layout/columns";
 
 //components
-@import "components/promo";
 @import "components/intro";
+@import "components/promo";
 @import "components/animals-cards";
 @import "components/feed";
 @import "components/testimonials";
