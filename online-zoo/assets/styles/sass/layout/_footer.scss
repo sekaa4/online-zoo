@@ -19,6 +19,7 @@
 		width: 298px;
 		height: 54px;
 		margin-bottom: 44px;
+		text-transform: uppercase;
 	}
 	&__block {
 		height: 174px;
@@ -183,7 +184,7 @@
 	justify-content: start;
 	align-content: space-between;
 	max-width: 111px;
-	> a:hover {
-		color: #f9804b;
+	> a:active {
+		color: #4b9200;
 	}
 }

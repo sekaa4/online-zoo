@@ -694,6 +694,10 @@ input[type=range].range-line {
   opacity: 0.7;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+.footer__creator > a:active {
+  text-decoration: underline;
+  color: #4b9200;
+}
 .footer__creator > span {
   display: block;
   max-width: 228px;
@@ -844,6 +848,7 @@ input[type=range].range-line {
   width: 298px;
   height: 54px;
   margin-bottom: 44px;
+  text-transform: uppercase;
 }
 .footer__block {
   height: 174px;
@@ -975,8 +980,8 @@ input[type=range].range-line {
   align-content: space-between;
   max-width: 111px;
 }
-.footer__social > a:hover {
-  color: #f9804b;
+.footer__social > a:active {
+  color: #4b9200;
 }
 
 .intro {
