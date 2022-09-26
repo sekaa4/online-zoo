@@ -24,19 +24,19 @@
 				<nav class="header__navigation">
 					<ul class="navigation">
 						<li class="navigation__link">
-							<a class="navigation__link_color" href="./index.html" target="blank">About</a>
+							<a class="navigation_disabled" href="./index.html">About</a>
 						</li>
 						<li class="navigation__link">
-							<a href="#">Map</a>
+							<a>Map</a>
 						</li>
 						<li class="navigation__link">
-							<a href="#">Zoos</a>
+							<a>Zoos</a>
 						</li>
 						<li class="navigation__link">
 							<a href="../donate/index.html">Donate</a>
 						</li>
 						<li class="navigation__link">
-							<a href="#">Contact us</a>
+							<a>Contact us</a>
 						</li>
 					</ul>
 				</nav>
@@ -80,6 +80,7 @@
 		<div class="animals-card__navigation-wrapper">
 			<div class="wrapper animals-card__wrapper">
 				<div class="layout-3-column animals-card-wrapper">
+					<button class="button-nav button-nav_left"></button>
 					<article class="animal">
 						<img src="../../assets/images/Third-section/Pandas.png" alt="Pandas" class="animals__image">
 						<div class="animal__content">
@@ -93,12 +94,13 @@
 								<!-- <img class="eat__image meat-shadowed" src="../../assets/icons/meet-fish_icon.png" alt="meet-fish_icon"> -->
 							</div>
 						</div>
+						<div class="box-shadow"></div>
 					</article>
 					<article class="animal">
 						<img src="../../assets/images/Third-section/Eagle.png" alt="Eagles" class="animals__image">
 						<div class="animal__content">
-							<div>
-								<span class="animal__name">EAGLES</span>
+							<div class="animal__name">
+								<span class="animal__title">EAGLES</span>
 								<p class="animal__text">Native to South America</p>
 							</div>
 							<div class="animal__eat">
@@ -107,12 +109,13 @@
 								<img class="eat__image meat-shadowed" src="../../assets/icons/meet-fish_icon.png" alt="meet-fish_icon">
 							</div>
 						</div>
+						<div class="box-shadow"></div>
 					</article>
 					<article class="animal">
 						<img src="../../assets/images/Third-section/Gorilla.png" alt="Gorillas" class="animals__image">
 						<div class="animal__content">
-							<div>
-								<span class="animal__name">GORILLAS</span>
+							<div class="animal__name">
+								<span class="animal__title">GORILLAS</span>
 								<p class="animal__text">Native to Congo</p>
 							</div>
 							<div class="animal__eat">
@@ -121,12 +124,13 @@
 								<!-- <img class="eat__image meat-shadowed" src="../../assets/icons/meet-fish_icon.png" alt="meet-fish_icon"> -->
 							</div>
 						</div>
+						<div class="box-shadow"></div>
 					</article>
 					<article class="animal">
 						<img src="../../assets/images/Third-section/Too-toed.png" alt="TWO-TOED SLOTH" class="animals__image">
 						<div class="animal__content">
-							<div>
-								<span class="animal__name">TWO-TOED SLOTH</span>
+							<div class="animal__name">
+								<span class="animal__title">TWO-TOED SLOTH</span>
 								<p class="animal__text">Mesoamerica, South America</p>
 							</div>
 							<div class="animal__eat">
@@ -135,12 +139,13 @@
 								<!-- <img class="eat__image meat-shadowed" src="../../assets/icons/meet-fish_icon.png" alt="meet-fish_icon"> -->
 							</div>
 						</div>
+						<div class="box-shadow"></div>
 					</article>
 					<article class="animal">
 						<img src="../../assets/images/Third-section/Cheetahs.png" alt="Cheetahs" class="animals__image">
 						<div class="animal__content">
-							<div>
-								<span class="animal__name">CHEATAHS</span>
+							<div class="animal__name">
+								<span class="animal__title">CHEATAHS</span>
 								<p class="animal__text">Native to Africa</p>
 							</div>
 							<div class="animal__eat">
@@ -149,12 +154,13 @@
 								<img class="eat__image meat-shadowed" src="../../assets/icons/meet-fish_icon.png" alt="meet-fish_icon">
 							</div>
 						</div>
+						<div class="box-shadow"></div>
 					</article>
 					<article class="animal">
 						<img src="../../assets/images/Third-section/Penguin.png" alt="Penguin" class="animals__image">
 						<div class="animal__content">
-							<div>
-								<span class="animal__name">PENGUINS</span>
+							<div class="animal__name">
+								<span class="animal__title">PENGUINS</span>
 								<p class="animal__text">Native to Antarctica</p>
 							</div>
 							<div class="animal__eat">
@@ -163,16 +169,10 @@
 								<img class="eat__image meat-shadowed" src="../../assets/icons/meet-fish_icon.png" alt="meet-fish_icon">
 							</div>
 						</div>
+						<div class="box-shadow"></div>
 					</article>
+					<button class="button-nav button-nav_right"></button>
 				</div>
-			</div>
-			<div class="button-nav">
-				<span href="#" class="ico__button">
-				</span>
-			</div>
-			<div class="button-nav">
-				<span href="#" class="ico__button">
-				</span>
 			</div>
 		</div>
 		<div class="animals-card-button wrapper ">
@@ -188,8 +188,9 @@
 				<p class="feed__text_body">During a time when the COVID-19 epidemic is touching all of our lives, we’re proud
 					and glad that people around the world find joy in PetStory.</p>
 				<p class="feed__text_paragraph">Even though the zoo has reopened, we need you now more than ever to help us deal
-					with these problems. Please consider a gift to our <span class="feed__text-decoration">Emergency Support
-						Fund</span> .</p>
+					with these problems. Please consider a gift to our <a href="../donate/index.html"
+						class="feed__text-decoration">Emergency Support
+						Fund</a> .</p>
 			</div>
 			<h3 class="feed__name">How it works</h3>
 			<div class="layout-5-column feeds-container">
@@ -218,9 +219,9 @@
 					<span class="feed__step-text">Your favourite animal gets delicious dish</span>
 				</article>
 			</div>
-			<div class="feed__button">
+			<form class="feed__button" action="../donate/index.html">
 				<button class="button button_length">Feed a friend now</button>
-			</div>
+			</form>
 		</div>
 	</section>
 	<section class="testimonials">
@@ -344,15 +345,15 @@
 					<object class="bamboo_footer" data="../../assets/icons/bamboo.svg" type="image/svg+xml"></object>
 					<span class="logo-text"><a href="./index.html">PetStory online</a></span>
 				</div>
-				<div class="footer__button">
+				<form class="footer__button" action="../donate/index.html">
 					<button class="button button_long">DONATE FOR VOLUNTEERS</button>
-				</div>
+				</form>
 			</div>
 			<div class="footer__subscribe">
 				<form action="" method="post">
 					<span class="subtitle subtitle_text">Subscribe to our news</span>
-					<input type="email" name="email" class="input input_footer" placeholder="Enter your email">
-					<button type="submit" class="button_bordered">Submit</button>
+					<input required type="email" name="email" class="input input_footer" placeholder="Enter your email">
+					<button type="submit" class="button_bordered button_invalid">Submit</button>
 				</form>
 			</div>
 			<div class="footer__social">
@@ -379,16 +380,16 @@
 			<div class="footer-navigation">
 				<ul class="navigation footer__navigation footer__navigation_link">
 					<li class="navigation__link">
-						<a class="navigation__link_color" href="./index.html" target="blank">About</a>
+						<a class="navigation__link_color" href="./index.html">About</a>
 					</li>
 					<li class="navigation__link">
-						<a href="">Map</a>
+						<a>Map</a>
 					</li>
 					<li class="navigation__link">
-						<a href="">Zoos</a>
+						<a>Zoos</a>
 					</li>
 					<li class="navigation__link">
-						<a href="#">Contact us</a>
+						<a>Contact us</a>
 					</li>
 				</ul>
 			</div>

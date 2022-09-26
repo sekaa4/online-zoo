@@ -27,12 +27,39 @@
 }
 
 .button-nav {
+	padding: 0;
+	margin: 0;
 	position: absolute;
 	display: inline-block;
 	height: 62px;
 	width: 62px;
+	border: none;
+}
+
+.button-nav_left {
 	background: url("../../assets/icons/arrow_elips_left.svg");
-	top: 50%;
+	transform: translateX(-62px);
+	top: 403px;
+	left: -20px;
+	&:hover {
+		cursor: pointer;
+	}
+	&:active {
+		background: url("../../assets/icons/arrow_elips_left_active.svg");
+	}
+}
+
+.button-nav_right {
+	background: url("../../assets/icons/arrow_elips_right.svg");
+	transform: translateX(62px);
+	top: 403px;
+	right: -20px;
+	&:hover {
+		cursor: pointer;
+	}
+	&:active {
+		background: url("../../assets/icons/arrow_elips_right_active.svg");
+	}
 }
 
 .button_length {

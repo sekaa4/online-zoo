@@ -41,6 +41,7 @@ p {
 	@include font(1.5rem, 1.2, 300);
 	margin: 0;
 	padding: 0;
+	margin-block: 0;
 }
 
 ul {

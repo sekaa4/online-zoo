@@ -77,11 +77,13 @@
 .feed__button {
 	margin: auto;
 	width: 29.8rem;
-	margin-top: 60px;
+	margin: 60px auto;
 }
 
 .feed__text-decoration {
-	padding-bottom: 1px;
+	color: inherit;
+	text-decoration: none;
+	padding-bottom: 3px;
 	border-bottom: 1px solid #fe9013;
 }
 

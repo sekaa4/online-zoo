@@ -3,17 +3,51 @@
 	display: block;
 	width: 366px;
 	height: 426px;
-	border: 1px solid $color-orang;
+	border: 1px solid transparent; //Обводка нужной толщины, но прозрачная
+	background: linear-gradient(#fa6f32 100%, #fe9013 100%); //Нужный градиент в качестве фона
+	box-shadow: inset 0px 0px 0px 100vw $color-white; //Тень направленная внутрь контейнера, перекрывает ненужный фон и оставляет только рамку
+
 	border-radius: 5px;
 	position: relative;
 	overflow: hidden;
-	.animals__image {
-		transition: all 1s;
 
-		&:hover {
-			transform: scale(1.1);
-		}
+	.animals__image,
+	.animal__name {
+		position: relative;
+		display: block;
+		transition: all 1s ease;
 	}
+
+	&:hover .animals__image {
+		transform: scale(1.1);
+		z-index: 0;
+	}
+
+	&:hover .animal__name {
+		transform: translateY(-100%);
+		z-index: 2;
+		color: $color-white;
+	}
+
+	.box-shadow {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: black;
+		opacity: 0.65;
+		display: none;
+		z-index: 1;
+	}
+
+	&:hover .box-shadow {
+		display: block;
+	}
+}
+
+.animal__name {
+	max-width: 294px;
 }
 
 .animals-card {
@@ -29,14 +63,12 @@
 }
 
 .animals-card-wrapper {
+	position: relative;
 	height: 872px;
 }
 
 .animal__content {
-	margin-left: 16px;
-}
-
-.animal__name {
+	padding: 8px 12px 13px 16px;
 }
 
 .animal__title {
@@ -47,9 +79,6 @@
 	position: absolute;
 	bottom: 13px;
 	right: 12px;
-}
-
-.animals-card-wrapper {
 }
 
 .animals-card-button {
@@ -69,4 +98,8 @@
 
 .animals-card__navigation-wrapper {
 	position: relative;
+}
+
+.animal__text {
+	margin-bottom: 2px;
 }

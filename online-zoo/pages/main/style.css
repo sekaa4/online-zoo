@@ -373,6 +373,7 @@ p {
   font-style: normal;
   margin: 0;
   padding: 0;
+  margin-block: 0;
 }
 
 ul {
@@ -416,12 +417,39 @@ ul {
 }
 
 .button-nav {
+  padding: 0;
+  margin: 0;
   position: absolute;
   display: inline-block;
   height: 62px;
   width: 62px;
+  border: none;
+}
+
+.button-nav_left {
   background: url("../../assets/icons/arrow_elips_left.svg");
-  top: 50%;
+  transform: translateX(-62px);
+  top: 403px;
+  left: -20px;
+}
+.button-nav_left:hover {
+  cursor: pointer;
+}
+.button-nav_left:active {
+  background: url("../../assets/icons/arrow_elips_left_active.svg");
+}
+
+.button-nav_right {
+  background: url("../../assets/icons/arrow_elips_right.svg");
+  transform: translateX(62px);
+  top: 403px;
+  right: -20px;
+}
+.button-nav_right:hover {
+  cursor: pointer;
+}
+.button-nav_right:active {
+  background: url("../../assets/icons/arrow_elips_right_active.svg");
 }
 
 .button_length {
@@ -761,6 +789,7 @@ input[type=range].range-line {
 .navigation__link {
   list-style: none;
   padding: 0 29px 0 29px;
+  cursor: pointer;
 }
 .navigation__link a {
   text-decoration: none;
@@ -896,18 +925,11 @@ input[type=range].range-line {
 .input_footer::placeholder {
   color: #bdbdbd;
 }
-.input_footer:invalid:focus {
-  border: 0.7px solid #d31414;
-  color: #d31414;
+.input_footer:valid:not(:placeholder-shown) {
+  border-color: green;
 }
-.input_footer:invalid:focus .button_bordered {
-  color: #d31414;
-}
-.input_footer:valid:focus {
-  border: 0.7px solid #4b9200;
-}
-.input_footer:valid:focus .button_bordered {
-  color: #4b9200;
+.input_footer:invalid:not(:placeholder-shown) {
+  border-color: red;
 }
 
 .footer-navigation {
@@ -925,10 +947,12 @@ input[type=range].range-line {
 .footer__navigation_link .navigation__link {
   padding: 0;
   margin-right: 58px;
+  cursor: pointer;
 }
 .footer__navigation_link .navigation__link a {
   text-decoration: none;
   color: #ffffff;
+  cursor: pointer;
 }
 .footer__navigation_link .navigation__link a:visited {
   color: #fe9013;
@@ -950,6 +974,9 @@ input[type=range].range-line {
   justify-content: start;
   align-content: space-between;
   max-width: 111px;
+}
+.footer__social > a:hover {
+  color: #f9804b;
 }
 
 .intro {
@@ -1072,16 +1099,45 @@ input[type=range].range-line {
   display: block;
   width: 366px;
   height: 426px;
-  border: 1px solid #f9804b;
+  border: 1px solid transparent;
+  background: linear-gradient(#fa6f32 100%, #fe9013 100%);
+  box-shadow: inset 0px 0px 0px 100vw #ffffff;
   border-radius: 5px;
   position: relative;
   overflow: hidden;
 }
-.animal .animals__image {
-  transition: all 1s;
+.animal .animals__image,
+.animal .animal__name {
+  position: relative;
+  display: block;
+  transition: all 1s ease;
 }
-.animal .animals__image:hover {
+.animal:hover .animals__image {
   transform: scale(1.1);
+  z-index: 0;
+}
+.animal:hover .animal__name {
+  transform: translateY(-100%);
+  z-index: 2;
+  color: #ffffff;
+}
+.animal .box-shadow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.65;
+  display: none;
+  z-index: 1;
+}
+.animal:hover .box-shadow {
+  display: block;
+}
+
+.animal__name {
+  max-width: 294px;
 }
 
 .animals-card {
@@ -1096,11 +1152,12 @@ input[type=range].range-line {
 }
 
 .animals-card-wrapper {
+  position: relative;
   height: 872px;
 }
 
 .animal__content {
-  margin-left: 16px;
+  padding: 8px 12px 13px 16px;
 }
 
 .animal__title {
@@ -1129,6 +1186,10 @@ input[type=range].range-line {
 
 .animals-card__navigation-wrapper {
   position: relative;
+}
+
+.animal__text {
+  margin-bottom: 2px;
 }
 
 .feed {
@@ -1198,11 +1259,13 @@ input[type=range].range-line {
 .feed__button {
   margin: auto;
   width: 29.8rem;
-  margin-top: 60px;
+  margin: 60px auto;
 }
 
 .feed__text-decoration {
-  padding-bottom: 1px;
+  color: inherit;
+  text-decoration: none;
+  padding-bottom: 3px;
   border-bottom: 1px solid #fe9013;
 }
 
@@ -1408,13 +1471,244 @@ input[type=range].range-line {
   background: rgba(255, 255, 255, 0.52);
   backdrop-filter: blur(2px);
   border-radius: 20px;
-  padding: 40px 0 62px 0;
+  padding: 40px 92px 62px 92px;
   height: 96.4rem;
 }
 
 .feed-content__wrapper {
   height: 23.8rem;
   margin-bottom: 60px;
+}
+
+.feed__title_donate {
+  font-size: 3.6rem;
+  line-height: 1.3;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  height: 4.7rem;
+}
+
+.feed__subtitle_donate {
+  display: block;
+  font-size: 1.61rem;
+  line-height: 1.4;
+  font-weight: 400;
+  font-style: normal;
+  margin: 10px 0px 0px 0px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.feed__text_information {
+  display: block;
+  text-align: left;
+  margin-top: 45px;
+  font-size: 3.6rem;
+  line-height: 1.3;
+  font-weight: 400;
+  font-style: normal;
+  color: #fe9013;
+}
+
+.feed__donate-name {
+  font-size: 4.8rem;
+  line-height: 1.2;
+  font-weight: 400;
+  font-style: normal;
+  color: #fe9013;
+  text-align: center;
+  margin: 0 263px 20px 250px;
+}
+
+.feed__donate_text {
+  display: block;
+  color: #333b41;
+  margin-bottom: 61px;
+}
+
+.feed__line {
+  line-height: 0;
+  margin-top: 21px;
+  width: 100%;
+}
+
+.feed__line_number {
+  display: block;
+  height: 36px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.feed__range {
+  background-color: #404950;
+  height: 27px;
+  margin-bottom: 12px;
+}
+
+.feed__slider {
+  width: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  height: 27px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.donate_layout-3-column {
+  display: flex;
+  margin: 0 215px;
+}
+
+.feeds-donate-container {
+  justify-content: center;
+  align-items: center;
+  height: 246px;
+  width: 532px;
+  margin-bottom: 48.5px;
+}
+
+.feed__donate {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 159px;
+  height: 91px;
+  margin-top: 58px;
+}
+.feed__donate > span {
+  display: block;
+}
+
+.number {
+  display: block;
+  font-size: 7.2rem;
+  line-height: 0.8;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 11px;
+}
+
+.number-text {
+  display: block;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  color: #333b41;
+}
+
+.feed__operation {
+  width: 14px;
+  margin: 26px 64px 0 11px;
+}
+
+.ico-operation {
+  width: 14px;
+  height: 14px;
+  display: block;
+  background: url("../../assets/icons/x_icon.png");
+}
+
+.feed__image {
+  width: 284px;
+  height: 246px;
+}
+
+.ico__image {
+  display: block;
+  width: 284px;
+  height: 246px;
+  background-image: url("../../assets/icons/panda_widget_donate.png");
+}
+
+label {
+  display: none;
+}
+
+.feed__line_text {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  font-weight: 400;
+  font-style: normal;
+  display: block;
+  width: 57px;
+  height: 22px;
+  text-align: left;
+  margin-bottom: 17px;
+}
+
+.feed__input {
+  width: 268px;
+  margin: 0 auto 25px;
+}
+
+.donate__input {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  font-weight: 400;
+  font-style: normal;
+  width: 268px;
+  height: 54px;
+  box-sizing: border-box;
+  border: 1px solid #929699;
+  border-radius: 2px;
+  padding: 16px 143px 16px 9px;
+  outline: 0;
+  background: inherit;
+}
+.donate__input::placeholder {
+  color: #929699;
+}
+
+.feed__radio {
+  width: 212px;
+  margin: 0 auto;
+}
+.feed__radio > label {
+  display: inline-block;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  font-weight: 400;
+  font-style: normal;
+  color: #333b41;
+  vertical-align: bottom;
+}
+.feed__radio > input {
+  outline: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #fe9013;
+  margin-right: 6px;
+}
+.feed__radio label:nth-of-type(1) {
+  margin-right: 46px;
+}
+
+.feed__button_donate {
+  margin: auto;
+  width: 29.8rem;
+  margin: 30px auto;
+}
+
+.feed__description {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  font-weight: 400;
+  font-style: normal;
+  color: #333b41;
+  width: 301px;
+  height: 22px;
+  margin: 0 auto;
+}
+.feed__description > span {
+  display: block;
+  width: 301px;
+  height: 22px;
 }
 
 /*# sourceMappingURL=style.css.map */
