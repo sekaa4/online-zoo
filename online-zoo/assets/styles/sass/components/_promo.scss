@@ -3,7 +3,12 @@
 	background-image: url("../../assets/images/second-section/flower_foto1.png");
 	background-repeat: no-repeat;
 	background-position: right;
-	height: 60.5rem;
+	height: 605px;
+	@include media-small-laptop {
+		height: 669px;
+		padding: 100px 0 142px;
+		background-image: none;
+	}
 }
 
 .promo__wrapper {
@@ -11,9 +16,13 @@
 	flex-direction: row-reverse;
 	justify-content: space-between;
 	align-items: center;
-	height: 40.3rem;
-	width: 116rem;
+	height: 403px;
+	width: 100%;
 	padding: 255px 0 0;
+	@include media-small-laptop {
+		height: 427px;
+		padding: 0;
+	}
 }
 
 .promo__content {

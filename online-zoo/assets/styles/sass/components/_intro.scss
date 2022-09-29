@@ -3,6 +3,13 @@
 	background-size: 100% 100%;
 	height: 78rem;
 	margin-bottom: 12px;
+	@include media-small-laptop {
+		background-image: url("../../assets/images/first-section/Giant_Panda_laptop.png");
+		background-size: 100% 100%;
+		height: 584px;
+		margin-bottom: 0;
+		overflow: hidden;
+	}
 }
 
 .intro__wrapper {
@@ -10,29 +17,45 @@
 	height: 70rem;
 }
 
-.intro__eclips {
-	width: 46.5rem;
-	height: 46.5rem;
+.intro__ellipse {
+	background: url("../../assets/images/first-section/Ellipse_6.png");
+	width: 465px;
+	height: 465px;
 	position: absolute;
-	right: 10.8rem;
-	bottom: 22.3rem;
-	z-index: 1;
+	right: 108px;
+	bottom: 223px;
+
+	@include media-small-laptop {
+		background: url("../../assets/images/first-section/Ellipse_laptop.png");
+		width: 367px;
+		height: 367px;
+		right: 147px;
+		bottom: 344px;
+		z-index: 0;
+	}
 }
 
 .intro__text {
 	position: absolute;
 	@include font($size: 10.65rem, $height: 0.75, $weight: 700);
 	color: $color-white;
-	width: 50rem;
-	height: 40rem;
+	width: 500px;
+	height: 400px;
 	text-align: center;
 	text-transform: uppercase;
-	bottom: 21.4rem;
+	bottom: 214px;
 	right: 0;
 	z-index: 2;
 	.text-color {
 		display: block;
 		color: #ffee2e;
+	}
+	@include media-small-laptop {
+		@include font($size: 8.5rem, $height: 0.75, $weight: 700);
+		width: 400px;
+		height: 320px;
+		bottom: 337px;
+		right: 56px;
 	}
 }
 
@@ -40,4 +63,9 @@
 	position: absolute;
 	bottom: 10rem;
 	right: 10rem;
+
+	@include media-small-laptop {
+		bottom: 243px;
+		right: 107px;
+	}
 }
