@@ -24,7 +24,7 @@
 				<nav class="header__navigation">
 					<ul class="navigation">
 						<li class="navigation__link">
-							<a class="navigation__link_color" href="../main/index.html">About</a>
+							<a href="../main/index.html">About</a>
 						</li>
 						<li class="navigation__link">
 							<a>Map</a>
@@ -33,7 +33,7 @@
 							<a>Zoos</a>
 						</li>
 						<li class="navigation__link">
-							<a href="./index.html">Donate</a>
+							<a class="navigation_active" href="./index.html">Donate</a>
 						</li>
 						<li class="navigation__link">
 							<a>Contact us</a>
@@ -86,18 +86,20 @@
 				</div>
 				<span class="feed__line_number"></span>
 			</div>
-			<div class="feed__input">
-				<input class="donate__input" type="number" placeholder="Another amount">
-			</div>
-			<div class="feed__radio">
-				<input class="feed__radio" type="radio" name="radio" value="Monthly" id="monthly">
-				<label for="monthly">Monthly</label>
-				<input class="feed__radio" type="radio" name="radio" value="Once" id="once" checked>
-				<label for="once">Once</label>
-			</div>
-			<div class="feed__button_donate">
-				<button class="button button_length">Feed a friend now</button>
-			</div>
+			<form>
+				<div class="feed__input">
+					<input class="donate__input" type="number" min="1" max="9999" placeholder="Another amount" required>
+				</div>
+				<div class="feed__radio">
+					<input class="radio" type="radio" name="radio" value="Monthly" id="monthly">
+					<label for="monthly">Monthly</label>
+					<input class="radio" type="radio" name="radio" value="Once" id="once" checked>
+					<label for="once">Once</label>
+				</div>
+				<div class="feed__button_donate">
+					<button class="button button_length">Feed a friend now</button>
+				</div>
+			</form>
 			<div class="feed__description">
 				<span class="feed__description-text">Share with your friends on social networks </span>
 			</div>
@@ -145,7 +147,7 @@
 			<div class="footer-navigation">
 				<ul class="navigation footer__navigation footer__navigation_link">
 					<li class="navigation__link">
-						<a class="navigation__link_color" href="./index.html">About</a>
+						<a href="../main/index.html">About</a>
 					</li>
 					<li class="navigation__link">
 						<a>Map</a>

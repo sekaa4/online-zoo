@@ -43,12 +43,9 @@
 		// -webkit-text-fill-color: transparent;
 	}
 
-	a:visited {
-		color: #fe9013;
-		// background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
-		// -webkit-background-clip: text;
-		// -webkit-text-fill-color: transparent;
-	}
+	// a:visited {
+	// 	color: #fe9013;
+	// }
 
 	a:hover {
 		background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
@@ -58,7 +55,27 @@
 	&:first-child {
 		padding-left: 6.3rem;
 	}
+
+	.navigation_active {
+		color: #fe9013;
+	}
 }
+
+.navigation__link.navigation_disabled {
+	pointer-events: none;
+	cursor: default;
+	> a {
+		color: #fe9013;
+	}
+
+	//transition: all 0.3s;
+}
+
+// .navigation__link.navigation_disabled:hover {
+// 	pointer-events: none;
+// 	cursor: default;
+// 	//transition: all 0.3s;
+// }
 
 // .navigation__link_color {
 // 	pointer-events: none;

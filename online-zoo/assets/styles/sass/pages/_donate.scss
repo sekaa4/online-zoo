@@ -197,40 +197,75 @@ label {
 }
 
 .donate__input {
+	box-sizing: border-box;
+	background: url("../../assets/icons/dollar.png") 95% 50% no-repeat;
+	color: #929699;
+	border: 1px solid #929699;
 	@include font(1.6rem, 1.4, 400);
 	width: 268px;
 	height: 54px;
-	box-sizing: border-box;
-
-	border: 1px solid #929699;
 	border-radius: 2px;
 	padding: 16px 143px 16px 9px;
 	outline: 0;
-	background: inherit;
 
 	&::placeholder {
 		color: #929699;
+	}
+
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	&:valid:not(:placeholder-shown) {
+		border-color: green;
+	}
+
+	&:invalid:not(:placeholder-shown) {
+		border-color: red;
 	}
 }
 
 .feed__radio {
 	width: 212px;
 	margin: 0 auto;
-	> label {
+	input {
+		position: absolute;
+		opacity: 0;
+		z-index: -1;
+	}
+
+	label {
+		position: relative;
 		display: inline-block;
 		@include font($size: 1.6rem, $height: 1.4, $weight: 400);
 		color: #333b41;
 		vertical-align: bottom;
+		user-select: none;
+		cursor: pointer;
+		padding-left: 26px;
 	}
-	> input {
-		outline: 0;
+
+	label:before {
+		content: "";
+		position: absolute;
+		display: inline-block;
+		border-radius: 50%;
+		border: 1px solid #fe9013;
 		width: 16px;
 		height: 16px;
-		border: 1px solid #fe9013;
-		margin-right: 6px;
+		left: 0;
+		bottom: 5px;
 	}
-	label:nth-of-type(1) {
-		margin-right: 46px;
+
+	.radio:checked + label:before {
+		background-color: #4b9200;
+		border: 1px solid #4b9200;
+	}
+
+	label:nth-of-type(2) {
+		padding-left: 26px;
+		margin-left: 47px;
 	}
 }
 

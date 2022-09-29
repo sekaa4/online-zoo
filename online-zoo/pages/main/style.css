@@ -489,6 +489,10 @@ ul {
   border: 1px solid #333b41;
   border-radius: 5px;
 }
+.button_bordered:hover {
+  color: red;
+  border: 1px solid red;
+}
 .button_bordered:active {
   color: #4b9200;
   border: 1px solid #4b9200;
@@ -671,6 +675,9 @@ input[type=range].range-line {
 .social:last-child {
   margin-bottom: 0;
 }
+.social:hover {
+  color: #4b9200;
+}
 
 .social > a {
   display: flex;
@@ -799,9 +806,6 @@ input[type=range].range-line {
   text-decoration: none;
   color: #ffffff;
 }
-.navigation__link a:visited {
-  color: #fe9013;
-}
 .navigation__link a:hover {
   background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
   -webkit-background-clip: text;
@@ -809,6 +813,17 @@ input[type=range].range-line {
 }
 .navigation__link:first-child {
   padding-left: 6.3rem;
+}
+.navigation__link .navigation_active {
+  color: #fe9013;
+}
+
+.navigation__link.navigation_disabled {
+  pointer-events: none;
+  cursor: default;
+}
+.navigation__link.navigation_disabled > a {
+  color: #fe9013;
 }
 
 .header__designed {
@@ -959,9 +974,6 @@ input[type=range].range-line {
   color: #ffffff;
   cursor: pointer;
 }
-.footer__navigation_link .navigation__link a:visited {
-  color: #fe9013;
-}
 .footer__navigation_link .navigation__link a:hover {
   background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
   -webkit-background-clip: text;
@@ -970,6 +982,11 @@ input[type=range].range-line {
 .footer__navigation_link .navigation__link:last-child {
   padding: 0;
   margin-right: 0;
+}
+.footer__navigation_link .navigation__link_color {
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .footer__social {
@@ -1653,28 +1670,45 @@ label {
 }
 
 .donate__input {
+  box-sizing: border-box;
+  background: url("../../assets/icons/dollar.png") 95% 50% no-repeat;
+  color: #929699;
+  border: 1px solid #929699;
   font-size: 1.6rem;
   line-height: 1.4;
   font-weight: 400;
   font-style: normal;
   width: 268px;
   height: 54px;
-  box-sizing: border-box;
-  border: 1px solid #929699;
   border-radius: 2px;
   padding: 16px 143px 16px 9px;
   outline: 0;
-  background: inherit;
 }
 .donate__input::placeholder {
   color: #929699;
+}
+.donate__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.donate__input:valid:not(:placeholder-shown) {
+  border-color: green;
+}
+.donate__input:invalid:not(:placeholder-shown) {
+  border-color: red;
 }
 
 .feed__radio {
   width: 212px;
   margin: 0 auto;
 }
-.feed__radio > label {
+.feed__radio input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.feed__radio label {
+  position: relative;
   display: inline-block;
   font-size: 1.6rem;
   line-height: 1.4;
@@ -1682,16 +1716,28 @@ label {
   font-style: normal;
   color: #333b41;
   vertical-align: bottom;
+  user-select: none;
+  cursor: pointer;
+  padding-left: 26px;
 }
-.feed__radio > input {
-  outline: 0;
+.feed__radio label:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid #fe9013;
   width: 16px;
   height: 16px;
-  border: 1px solid #fe9013;
-  margin-right: 6px;
+  left: 0;
+  bottom: 5px;
 }
-.feed__radio label:nth-of-type(1) {
-  margin-right: 46px;
+.feed__radio .radio:checked + label:before {
+  background-color: #4b9200;
+  border: 1px solid #4b9200;
+}
+.feed__radio label:nth-of-type(2) {
+  padding-left: 26px;
+  margin-left: 47px;
 }
 
 .feed__button_donate {

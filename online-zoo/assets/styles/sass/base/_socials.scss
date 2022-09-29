@@ -11,6 +11,9 @@
 	color: $color-white;
 	text-decoration: none;
 	cursor: pointer;
+	&:hover {
+		color: #4b9200;
+	}
 }
 
 .social > a {
