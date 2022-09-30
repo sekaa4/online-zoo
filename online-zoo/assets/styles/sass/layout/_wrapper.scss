@@ -5,4 +5,12 @@
 		max-width: 940px;
 		margin: 0 auto;
 	}
+	@include media-tablet {
+		max-width: 600px;
+		margin: 0 auto;
+	}
+	@include media-mobile {
+		max-width: 300px;
+		margin: 0 auto;
+	}
 }

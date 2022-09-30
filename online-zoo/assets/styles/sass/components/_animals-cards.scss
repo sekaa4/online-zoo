@@ -1,4 +1,35 @@
+.animals-card {
+	@extend %transition;
+	height: 1106px;
+	background: url("../../assets/images/Third-section/palm_foto.png") bottom left,
+		url("../../assets/images/Third-section/strelitzia 1.png") bottom right;
+	background-repeat: no-repeat;
+	@include media-small-laptop {
+		height: 1075px;
+		background: url("../../assets/images/Third-section/palm_foto_laptop.png") bottom left,
+			url("../../assets/images/Third-section/strelitzia 1_laptop.png") bottom right;
+		background-repeat: no-repeat;
+	}
+
+	@include media-tablet {
+		height: 970px;
+		padding-bottom: 100px;
+		background: url("../../assets/images/Third-section/palm_foto_laptop.png") bottom 0% left -12%/29% 20.5%,
+			url("../../assets/images/Third-section/strelitzia 1_laptop.png") bottom right/27% 13%;
+		background-repeat: no-repeat;
+	}
+
+	@include media-mobile {
+		padding: 34px 0 60px 0;
+		height: 1556px;
+		background: url("../../assets/images/Third-section/palm_foto_laptop.png") bottom 1px left -10px/68px 72.5px,
+			url("../../assets/images/Third-section/strelitzia 1_laptop.png") bottom -1px right -19px/87px 63px;
+		background-repeat: no-repeat;
+	}
+}
+
 .animal {
+	@extend %transition;
 	box-sizing: border-box;
 	display: block;
 	width: 366px;
@@ -50,28 +81,25 @@
 		width: 294px;
 		height: 354px;
 	}
-}
 
-.animal__name {
-	max-width: 294px;
-}
-
-.animals-card {
-	height: 1106px;
-	background: url("../../assets/images/Third-section/palm_foto.png") bottom left,
-		url("../../assets/images/Third-section/strelitzia 1.png") bottom right;
-	background-repeat: no-repeat;
-	@include media-small-laptop {
-		height: 1075px;
-		background: url("../../assets/images/Third-section/palm_foto_laptop.png") bottom left,
-			url("../../assets/images/Third-section/strelitzia 1_laptop.png") bottom right;
-		background-repeat: no-repeat;
+	@include media-tablet {
+		flex-basis: 285px;
+		max-width: 285px;
+		height: 332px;
 	}
 }
 
 .animals-card__wrapper {
 	width: 1158px;
 	height: 872px;
+
+	@include media-tablet {
+		height: 756px;
+	}
+
+	@include media-mobile {
+		height: 1388px;
+	}
 }
 
 .animals-card-wrapper {
@@ -80,20 +108,70 @@
 	@include media-small-laptop {
 		height: 800px;
 	}
+
+	@include media-tablet {
+		height: 756px;
+	}
+
+	@include media-mobile {
+		height: 1388px;
+	}
 }
 
 .animal__content {
 	padding: 8px 12px 13px 16px;
+
+	@include media-tablet {
+		padding: 6px 43px 11px 11px;
+	}
+}
+
+.animal__name {
+	max-width: 294px;
+
+	@include media-tablet {
+		@include font($size: 1.17rem);
+		max-width: 230px;
+	}
 }
 
 .animal__title {
 	@include font($size: 1.6rem, $height: 1.4, $weight: 500);
+
+	@include media-tablet {
+		max-width: 230px;
+		@include font($size: 1.25rem, $weight: 500);
+	}
+}
+
+.animal__text {
+	margin-bottom: 2px;
+	@include media-tablet {
+		@include font($size: 1.2rem, $height: 1.2);
+		max-width: 230px;
+		margin-bottom: 0;
+	}
 }
 
 .eat__image {
 	position: absolute;
 	bottom: 13px;
 	right: 12px;
+
+	@include media-tablet {
+		max-width: 9%;
+		position: absolute;
+		bottom: 9px;
+		right: 9px;
+	}
+}
+
+.eat__image.meat-shadowed {
+	@include media-tablet {
+		max-width: 14%;
+		bottom: 9px;
+		right: 4px;
+	}
 }
 
 .animals-card-button {
@@ -101,6 +179,10 @@
 	margin: 80px auto 100px auto;
 	@include media-small-laptop {
 		margin: 9px auto 0 auto;
+	}
+
+	@include media-mobile {
+		margin: 20px auto 0 auto;
 	}
 }
 
@@ -110,14 +192,37 @@
 	border-width: 0;
 }
 
-// .animals-card__wrapper {
-// 	display: flex;
-// }
-
 .animals-card__navigation-wrapper {
 	position: relative;
+
+	@include media-tablet {
+		height: 756px;
+		margin-bottom: 60px;
+	}
+
+	@include media-mobile {
+		height: 1388px;
+		margin-bottom: 20px;
+	}
 }
 
-.animal__text {
-	margin-bottom: 2px;
+.animal__number1,
+.animal__number2 {
+	@include media-tablet {
+		order: 1;
+	}
+}
+
+.animal__number5,
+.animal__number6 {
+	@include media-tablet {
+		order: 4;
+	}
+}
+
+.animal__number7,
+.animal__number8 {
+	@include media-tablet {
+		display: none;
+	}
 }

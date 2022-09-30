@@ -17,6 +17,20 @@
 			flex-basis: 62px;
 		}
 	}
+
+	@include media-tablet {
+		.button-nav {
+			display: inline-block;
+			position: relative;
+			flex-basis: 62px;
+		}
+	}
+
+	@include media-mobile {
+		.button-nav {
+			display: none;
+		}
+	}
 }
 
 .layout-2-column {
@@ -34,9 +48,12 @@
 	flex-wrap: wrap;
 	align-content: space-around;
 	> .feed__step {
-		flex-basis: 16.8rem;
+		flex-basis: 168px;
 	}
 	> .feed__arrow {
 		height: 170px;
+	}
+
+	@include media-tablet {
 	}
 }

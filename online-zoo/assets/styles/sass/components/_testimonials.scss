@@ -13,6 +13,7 @@
 		background-repeat: no-repeat;
 		margin: 0;
 	}
+
 	@include media-small-laptop {
 		padding-top: 100px;
 		padding-bottom: 140px;
@@ -27,6 +28,12 @@
 			background-repeat: no-repeat;
 			margin: 0;
 		}
+	}
+
+	@include media-tablet {
+		height: 668px;
+		padding-top: 61px;
+		padding-bottom: 80px;
 	}
 }
 
@@ -48,7 +55,6 @@
 }
 
 .testimonials-wrapper {
-	//margin-bottom: 21px;
 	height: 391px;
 }
 

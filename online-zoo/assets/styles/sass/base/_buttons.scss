@@ -34,6 +34,10 @@
 	height: 62px;
 	width: 62px;
 	border: none;
+
+	@include media-mobile {
+		display: none;
+	}
 }
 
 .button-nav_left {
@@ -56,6 +60,11 @@
 		background-repeat: no-repeat;
 		margin: 0 0 0 322px;
 	}
+
+	@include media-tablet {
+		order: 2;
+		margin: 0 0 7px 223px;
+	}
 }
 
 .button-nav_right {
@@ -77,6 +86,11 @@
 		//transform: translateX(18%);
 		background-repeat: no-repeat;
 		margin: 0 322px 0 0;
+	}
+
+	@include media-tablet {
+		order: 3;
+		margin: 0 223px 7px 0;
 	}
 }
 
