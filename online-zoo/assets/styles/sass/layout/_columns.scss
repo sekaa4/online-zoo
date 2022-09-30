@@ -7,6 +7,16 @@
 .layout-3-column {
 	@include columns($width: 366px);
 	align-content: space-between;
+	@include media-small-laptop {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		.button-nav {
+			display: inline-block;
+			position: relative;
+			flex-basis: 62px;
+		}
+	}
 }
 
 .layout-2-column {

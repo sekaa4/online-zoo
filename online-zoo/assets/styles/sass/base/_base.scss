@@ -2,10 +2,24 @@ html {
 	font-size: 10px;
 }
 
+// img {
+// 	width: auto;
+// 	max-width: 100%;
+// }
+
+// * {
+// 	border: 1px solid red;
+// 	box-sizing: border-box;
+// }
+
 body {
 	@extend %font-main;
 	@include font(1.6rem, 1.4, 500);
 	background-color: $color-white;
+	overflow-x: hidden;
+	@include media-small-laptop {
+		overflow-x: hidden;
+	}
 }
 
 *,

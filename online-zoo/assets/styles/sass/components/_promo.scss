@@ -8,6 +8,7 @@
 		height: 669px;
 		padding: 100px 0 142px;
 		background-image: none;
+		margin: 0;
 	}
 }
 
@@ -26,8 +27,13 @@
 }
 
 .promo__content {
-	height: 40.3rem;
-	width: 46.5rem;
+	height: 403px;
+	width: 465px;
+	@include media-small-laptop {
+		height: 427px;
+		width: 454px;
+		padding: 0;
+	}
 }
 
 .promo__title {
@@ -63,8 +69,17 @@
 	@include font(1.6rem, 1.4, 400);
 	display: block;
 	padding: 0;
+	@include media-small-laptop {
+		height: 132px;
+		width: 454px;
+	}
 }
 
 .promo__image {
-	height: 40.3rem;
+	height: 403px;
+	margin-bottom: 6px;
+}
+
+.image {
+	display: block;
 }

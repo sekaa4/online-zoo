@@ -3,6 +3,6 @@
 	margin: auto;
 	@include media-small-laptop {
 		max-width: 940px;
-		margin: auto;
+		margin: 0 auto;
 	}
 }

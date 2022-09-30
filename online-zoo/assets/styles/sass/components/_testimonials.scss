@@ -1,5 +1,5 @@
 .testimonials {
-	height: 91.9rem;
+	height: 919px;
 	padding-top: 140px;
 	position: relative;
 	overflow: hidden;
@@ -13,10 +13,28 @@
 		background-repeat: no-repeat;
 		margin: 0;
 	}
+	@include media-small-laptop {
+		padding-top: 100px;
+		padding-bottom: 140px;
+		height: 842px;
+		&__image {
+			position: absolute;
+			bottom: -86px;
+			right: 0;
+			background: url("../../assets/images/fifth-section/leav_foto_laptop.png");
+			width: 196px;
+			height: 325px;
+			background-repeat: no-repeat;
+			margin: 0;
+		}
+	}
 }
 
 .testimonials__wrapper {
-	height: 57.5rem;
+	height: 468px;
+	@include media-small-laptop {
+		height: 468px;
+	}
 }
 
 .testimonials__title {
@@ -24,6 +42,9 @@
 	height: 47px;
 	margin: auto;
 	margin-bottom: 47px;
+	@include media-small-laptop {
+		margin-bottom: 30px;
+	}
 }
 
 .testimonials-wrapper {
@@ -35,6 +56,10 @@
 	line-height: 0;
 	margin-top: 21px;
 	margin-left: 280px;
+	@include media-small-laptop {
+		margin-top: 20px;
+		margin-left: 269px;
+	}
 }
 
 .testimonial {
@@ -60,6 +85,8 @@
 	box-shadow: inset 0px 0px 0px 100vw #f1f3f2; //Тень направленная внутрь контейнера, перекрывает ненужный фон и оставляет только рамку
 	border-radius: 20px;
 	padding: 14px 15px 19px 14px;
+	@include media-small-laptop {
+	}
 }
 
 .testimonial__content {
@@ -123,14 +150,23 @@
 .testimonial_1,
 .testimonial_2 {
 	width: 268px;
+	@include media-small-laptop {
+		width: 293px;
+	}
 }
 
 .testimonial_3 {
 	width: 267px;
+	@include media-small-laptop {
+		width: 294px;
+	}
 }
 
 .testimonial_4 {
 	width: 266px;
+	@include media-small-laptop {
+		display: none;
+	}
 }
 
 .testimonial__text {
@@ -155,4 +191,7 @@
 	height: 54px;
 	width: 298px;
 	margin: 31px 100% 0 auto;
+	@include media-small-laptop {
+		margin-top: 52px;
+	}
 }

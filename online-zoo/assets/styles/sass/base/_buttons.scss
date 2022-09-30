@@ -46,6 +46,15 @@
 	}
 	&:active {
 		background: url("../../assets/icons/arrow_elips_left_active.svg");
+		background-repeat: no-repeat;
+	}
+	@include media-small-laptop {
+		transform: none;
+		top: 0;
+		left: 0;
+		//transform: translateX(69%);
+		background-repeat: no-repeat;
+		margin: 0 0 0 322px;
 	}
 }
 
@@ -59,6 +68,15 @@
 	}
 	&:active {
 		background: url("../../assets/icons/arrow_elips_right_active.svg");
+		background-repeat: no-repeat;
+	}
+	@include media-small-laptop {
+		transform: none;
+		top: 0;
+		right: 0;
+		//transform: translateX(18%);
+		background-repeat: no-repeat;
+		margin: 0 322px 0 0;
 	}
 }
 
@@ -95,6 +113,10 @@
 	background: #f1f3f2;
 	border: 1px solid #333b41;
 	border-radius: 5px;
+	@include media-small-laptop {
+		width: 127px;
+		margin-right: 32px;
+	}
 
 	&:hover {
 		color: red;

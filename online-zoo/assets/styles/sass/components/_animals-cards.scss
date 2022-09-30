@@ -44,6 +44,12 @@
 	&:hover .box-shadow {
 		display: block;
 	}
+
+	@include media-small-laptop {
+		flex-basis: 294px;
+		width: 294px;
+		height: 354px;
+	}
 }
 
 .animal__name {
@@ -51,10 +57,16 @@
 }
 
 .animals-card {
-	height: 110.6rem;
+	height: 1106px;
 	background: url("../../assets/images/Third-section/palm_foto.png") bottom left,
 		url("../../assets/images/Third-section/strelitzia 1.png") bottom right;
 	background-repeat: no-repeat;
+	@include media-small-laptop {
+		height: 1075px;
+		background: url("../../assets/images/Third-section/palm_foto_laptop.png") bottom left,
+			url("../../assets/images/Third-section/strelitzia 1_laptop.png") bottom right;
+		background-repeat: no-repeat;
+	}
 }
 
 .animals-card__wrapper {
@@ -65,6 +77,9 @@
 .animals-card-wrapper {
 	position: relative;
 	height: 872px;
+	@include media-small-laptop {
+		height: 800px;
+	}
 }
 
 .animal__content {
@@ -84,6 +99,9 @@
 .animals-card-button {
 	width: 29.8rem;
 	margin: 80px auto 100px auto;
+	@include media-small-laptop {
+		margin: 9px auto 0 auto;
+	}
 }
 
 .animals-card__button {

@@ -31,7 +31,16 @@
 		backdrop-filter: blur(2px);
 		border-radius: 20px;
 		padding: 41px 0 59px 0;
-		height: 83.5rem;
+		height: 876px;
+		@include media-small-laptop {
+			padding: 30px 48px 50px 49px;
+			height: 796px;
+		}
+	}
+	@include media-small-laptop {
+		padding-top: 30px;
+		padding-bottom: 50px;
+		height: 876px;
 	}
 }
 
@@ -52,6 +61,9 @@
 	margin: 30px 0px 40px 99px;
 	color: #333b41;
 	height: 2.9rem;
+	@include media-small-laptop {
+		margin: 20px 0 20px;
+	}
 }
 
 .feed__text_body {
@@ -59,6 +71,11 @@
 	color: #333b41;
 	margin-left: 99px;
 	height: 2.1rem;
+	@include media-small-laptop {
+		margin-left: 0;
+		//width: 96.5%;
+		max-width: 813px;
+	}
 }
 
 .feed__text_paragraph {
@@ -67,6 +84,11 @@
 	margin: 10px 0 60px 99px;
 	width: 86.3rem;
 	height: 4.2rem;
+	@include media-small-laptop {
+		margin: 32px 0 40px 0;
+		margin-left: 0;
+		max-width: 823px;
+	}
 }
 
 .feed__name {
@@ -75,9 +97,11 @@
 }
 
 .feed__button {
-	margin: auto;
 	width: 29.8rem;
 	margin: 60px auto;
+	@include media-small-laptop {
+		margin: 69px auto 0 auto;
+	}
 }
 
 .feed__text-decoration {

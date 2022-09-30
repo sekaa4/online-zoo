@@ -6,6 +6,9 @@ input[type="range"].range-line {
 	height: 8px;
 	border-radius: 5px;
 	overflow: hidden;
+	@include media-small-laptop {
+		width: 390px;
+	}
 }
 
 /* The slider itself */
@@ -35,6 +38,8 @@ input[type="range"].range-line {
 	//opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
 	-webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
 	transition: opacity 0.2s;
+	@include media-small-laptop {
+	}
 }
 
 /* Mouse-over effects */
@@ -51,6 +56,9 @@ input[type="range"].range-line {
 	background: #fe9013; /* Green background */
 	border-radius: 5px;
 	cursor: pointer; /* Cursor on hover */
+	@include media-small-laptop {
+		width: 75px;
+	}
 }
 
 // .slider::-moz-range-thumb {
