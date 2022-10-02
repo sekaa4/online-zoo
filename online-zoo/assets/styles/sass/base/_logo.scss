@@ -40,8 +40,8 @@
 	display: none;
 
 	.bamboo-header {
-		bottom: 0.4rem;
-		right: 3.45rem;
+		bottom: 4px;
+		right: 34.5px;
 	}
 
 	> h1 {
@@ -55,6 +55,35 @@
 	}
 
 	@include media-tablet {
+		display: block;
+	}
+}
+
+.footer__logo_mobile {
+	position: relative;
+	width: 128px;
+	height: 23px;
+	text-align: center;
+	justify-content: center;
+	border: none;
+	display: none;
+
+	.bamboo-header {
+		bottom: 6px;
+		right: 130px;
+	}
+
+	> span {
+		@include font($size: 1.9rem, $height: 1.2);
+		width: 128px;
+		height: 23px;
+		> a {
+			text-decoration: none;
+			color: $color-white;
+		}
+	}
+
+	@include media-mobile {
 		display: block;
 	}
 }

@@ -58,7 +58,11 @@
 
 	@include media-tablet {
 		padding: 20px 0;
-		height: 1082px;
+		height: 781px;
+	}
+
+	@include media-mobile {
+		height: 1083px;
 	}
 }
 

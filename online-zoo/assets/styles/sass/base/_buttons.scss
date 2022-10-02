@@ -1,7 +1,7 @@
 .button {
 	@include font($size: 1.6rem, $height: 1.4, $weight: 500);
-	width: 29.8rem;
-	height: 5.4rem;
+	width: 298px;
+	height: 54px;
 	color: $color-white;
 	padding: 16px 1px 16px 5px;
 	text-align: center;
@@ -104,6 +104,11 @@
 	background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
 	border-radius: 5px;
 	border-width: 0;
+
+	@include media-tablet {
+		width: 238px;
+		height: 54px;
+	}
 }
 
 .button_long {
