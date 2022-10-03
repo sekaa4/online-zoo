@@ -49,8 +49,8 @@
 
 .bamboo-header {
 	position: absolute;
-	bottom: 0.8rem;
-	right: 5.9rem;
+	bottom: 8px;
+	right: 59px;
 }
 
 .navigation {
@@ -60,7 +60,7 @@
 
 .navigation__link {
 	list-style: none;
-	padding: 0 19px 0 29px;
+	padding: 0 17px 0 41px;
 	cursor: pointer;
 	a {
 		text-decoration: none;
@@ -69,21 +69,25 @@
 		// -webkit-text-fill-color: transparent;
 	}
 
-	// a:visited {
-	// 	color: #fe9013;
-	// }
-
 	a:hover {
 		background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
 	&:first-child {
-		padding-left: 6.3rem;
+		padding-left: 50px;
+
+		@include media-small-laptop {
+			padding-left: 62px;
+		}
 	}
 
 	.navigation_active {
 		color: #fe9013;
+	}
+
+	@include media-small-laptop {
+		padding: 0 6px 0 42px;
 	}
 }
 
@@ -112,7 +116,7 @@
 	padding-left: 409px;
 
 	@include media-small-laptop {
-		padding-left: 240px;
+		padding-left: 253px;
 	}
 
 	@include media-tablet {

@@ -44,6 +44,13 @@
 					<a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">Designed by
 						©</a>
 				</div>
+				<div class="logo header__logo_mobile">
+					<object class="bamboo-header" data="../../assets/icons/bamboo_tablet.svg" type="image/svg+xml"></object>
+					<h1><a href="./index.html">PetStory online</a></h1>
+				</div>
+				<div class="hamburger">
+					<span class="hamburger__line"></span>
+				</div>
 			</div>
 		</header>
 		<div class="intro-donate__wrapper">
@@ -54,7 +61,7 @@
 			<div class="wrapper feed-content__wrapper">
 				<h3 class="feed__title_donate">THE ZOO HAS OFFICIALLY REOPENED BUT WE STILL NEED YOUR HELP!</h3>
 				<span class="feed__subtitle_donate">Even though the Zoo has been able to reopen, we are at a greatly reduced
-					capacity with educational programs and public and private events cancelled or<br> postponed for additional
+					capacity with educational programs and public and private events cancelled or postponed for additional
 					months.
 					We need you now more than ever to help ensure that we overcome these challenges. We have been actively raising
 					funds in the community, and we are grateful for the generosity. But much more support is still needed, and we
@@ -80,11 +87,28 @@
 			</div>
 			<div class="feed__line">
 				<span class="feed__line_text">Amount</span>
-				<label for="panda">Amount</label>
-				<div class="feed__range">
-					<input class="feed__slider" id="panda" type="range" min="1" max="8" step="1" value="1">
+				<div class="feed__line-container">
+					<ul class="feed__button-container">
+						<li class="feed__button-area"><button class="radio__button"></button></li>
+						<li class="feed__button-area"><button class="radio__button"></button></li>
+						<li class="feed__button-area"><button class="radio__button active-dot"></button></li>
+						<li class="feed__button-area"><button class="radio__button "></button></li>
+						<li class="feed__button-area"><button class="radio__button"></button></li>
+						<li class="feed__button-area"><button class="radio__button active-dot1"></button></li>
+						<li class="feed__button-area"><button class="radio__button"></button></li>
+						<li class="feed__button-area"><button class="radio__button"></button></li>
+					</ul>
 				</div>
-				<span class="feed__line_number"></span>
+				<div class="line__number">
+					<span class="number__text">$5000</span>
+					<span class="number__text">$2000</span>
+					<span class="number__text">$1000</span>
+					<span class="number__text">$500</span>
+					<span class="number__text">$250</span>
+					<span class="number__text">$100</span>
+					<span class="number__text">$50</span>
+					<span class="number__text">$25</span>
+				</div>
 			</div>
 			<form>
 				<div class="feed__input">
@@ -110,9 +134,13 @@
 			<div class="layout-2-column footer__block">
 				<div class="footer__logo">
 					<object class="bamboo_footer" data="../../assets/icons/bamboo.svg" type="image/svg+xml"></object>
-					<span class="logo-text"><a href="../main/index.html">PetStory online</a></span>
+					<span class="logo-text"><a href="./index.html">PetStory online</a></span>
 				</div>
-				<form class="footer__button" action="./index.html">
+				<div class="logo footer__logo_mobile">
+					<object class="bamboo-header" data="../../assets/icons/bamboo.svg" type="image/svg+xml"></object>
+					<span><a href="./index.html">PetStory online</a></span>
+				</div>
+				<form class="footer__button" action="../donate/index.html">
 					<button class="button button_long">Donate for volunteers</button>
 				</form>
 			</div>
@@ -123,7 +151,7 @@
 					<button type="submit" class="button_bordered button_invalid">Submit</button>
 				</form>
 			</div>
-			<div class="footer__social">
+			<div class="footer__social donate__social">
 				<a class="social" href="https://www.facebook.com/">
 					<span class="social__ico_1"></span>
 					<span class="link-social__text">Facebook</span>
@@ -144,10 +172,13 @@
 
 				</a>
 			</div>
+			<form class="footer__button_mobile" action="../donate/index.html">
+				<button class="button button_long">Donate for volunteers</button>
+			</form>
 			<div class="footer-navigation">
 				<ul class="navigation footer__navigation footer__navigation_link">
 					<li class="navigation__link">
-						<a href="../main/index.html">About</a>
+						<a class="" href="../main/index.html">About</a>
 					</li>
 					<li class="navigation__link">
 						<a>Map</a>
@@ -160,7 +191,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class=" footer__creator">
+			<div class="footer__creator">
 				<a href="https://www.rs.school/" target="blank">
 					<span class="footer__designed">Designed by Alisa Samborskaya</span>
 					<span class="footer__designed">©RSSchool & ©Yem Digital 2021</span>
