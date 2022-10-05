@@ -40,3 +40,137 @@
 .hamburger__line {
 	@extend %hamburger-line;
 }
+
+//humburger menu
+@keyframes slide {
+	from {
+		right: -100%;
+	}
+	to {
+		right: 0;
+	}
+}
+
+.hamburger__menu {
+	animation: slide 0.5s;
+	display: none;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 4;
+}
+
+._active {
+	@include media-tablet {
+		display: block;
+	}
+}
+
+.hamburger__wrapper {
+	background-color: $color-white;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	column-gap: 202px;
+	row-gap: 30px;
+	max-width: 640px;
+	width: 100%;
+	position: absolute;
+	z-index: 6;
+	height: 329px;
+	top: 0;
+	right: 0;
+	padding: 10px 40px 40px 10px;
+
+	@include media-tablet {
+	}
+}
+
+.hamburger__close {
+	width: 30px;
+	height: 30px;
+	position: relative;
+	cursor: pointer;
+
+	&:before {
+		@extend %hamburger-line;
+		background: orange;
+		top: 50%;
+		transform: rotate(45deg);
+	}
+
+	&:after {
+		@extend %hamburger-line;
+		background: orange;
+		top: 50%;
+		transform: rotate(-45deg);
+	}
+}
+
+.hamburger__logo {
+	position: relative;
+	box-sizing: border-box;
+	width: 66px;
+	height: 42px;
+	border: 0.5px solid #fe9013;
+	border-radius: 2px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+
+	a {
+		display: inline-block;
+		vertical-align: middle;
+		@include font($size: 1.52rem, $height: 1.2);
+		text-decoration: none;
+		color: #fe9013;
+		width: 58px;
+		height: 36px;
+	}
+
+	.bamboo_footer {
+		filter: invert(68%) sepia(85%) saturate(2574%) hue-rotate(0deg) brightness(103%) contrast(104%);
+		position: absolute;
+		bottom: 0.4rem;
+		right: 4.7rem;
+	}
+
+	@include media-tablet {
+		// margin-bottom: 16px;
+	}
+
+	@include media-mobile {
+		// display: none;
+	}
+}
+
+.hamburger__navigation {
+	.navigation-container {
+		height: 207px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 0;
+
+		.navigation__link {
+			padding: 0;
+			> a {
+				@include font($size: 1.6rem, $height: 1.4, $weight: 400);
+				color: #333b41;
+			}
+		}
+	}
+}
+
+.hamburger__menu-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 5;
+}
