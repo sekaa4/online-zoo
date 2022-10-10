@@ -17,7 +17,6 @@ function toggleMenu() {
 
 }
 
-
 close[0].addEventListener('click', toggleMenu);
 hamburger[0].addEventListener('click', toggleMenu);
 hamburgerNavigation.addEventListener('click', toggleMenu);
@@ -85,12 +84,8 @@ function shuffle(currentItem) {
 	let array = Array.from(currentItem.querySelectorAll('.animal'));
 
 	for (let i = array.length - 1; i > 0; i--) {
-		let j = Math.floor(Math.random() * (i + 1)); // случайный индекс от 0 до i
+		let j = Math.floor(Math.random() * (i + 1));
 
-		// поменять элементы местами
-		// let t = array[i];
-		// array[i] = array[j];
-		// array[j] = t
 		[array[i], array[j]] = [array[j], array[i]];
 		animalsNext = array;
 	}
