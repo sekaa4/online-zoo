@@ -3386,6 +3386,7 @@ input[type=range].range-line {
 }
 .feed__line-container .feed__button-container {
   position: relative;
+  z-index: 0;
   height: 27px;
   max-width: 100%;
   padding: 0;
@@ -3403,6 +3404,7 @@ input[type=range].range-line {
   cursor: pointer;
 }
 .feed__line-container .feed__button-container .feed__button-area > button {
+  cursor: pointer;
   padding: 0;
   width: 10px;
   height: 10px;
@@ -3913,6 +3915,10 @@ label {
   .donate__social {
     margin: 0 auto;
   }
+}
+
+.number__color {
+  color: #fe9013;
 }
 
 /*# sourceMappingURL=style.css.map */

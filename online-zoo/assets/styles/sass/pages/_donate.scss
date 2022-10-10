@@ -279,6 +279,7 @@
 
 	.feed__button-container {
 		position: relative;
+		z-index: 0;
 		height: 27px;
 		max-width: 100%;
 		padding: 0;
@@ -297,6 +298,7 @@
 			cursor: pointer;
 
 			> button {
+				cursor: pointer;
 				padding: 0;
 				width: 10px;
 				height: 10px;
@@ -780,4 +782,8 @@ label {
 	@include media-mobile {
 		margin: 0 auto;
 	}
+}
+
+.number__color {
+	color: #fe9013;
 }

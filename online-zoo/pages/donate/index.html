@@ -123,14 +123,15 @@
 				<span class="feed__line_text">Amount</span>
 				<div class="feed__line-container">
 					<ul class="feed__button-container">
-						<li class="feed__button-area"><button class="radio__button"></button></li>
-						<li class="feed__button-area"><button class="radio__button"></button></li>
-						<li class="feed__button-area"><button class="radio__button active-dot"></button></li>
-						<li class="feed__button-area"><button class="radio__button "></button></li>
-						<li class="feed__button-area"><button class="radio__button"></button></li>
-						<li class="feed__button-area"><button class="radio__button active-dot1"></button></li>
-						<li class="feed__button-area"><button class="radio__button"></button></li>
-						<li class="feed__button-area"><button class="radio__button"></button></li>
+						<li class="feed__button-area"><button class="radio__button" value="5000"></button></li>
+						<li class="feed__button-area"><button class="radio__button" value="2000"></button></li>
+						<li class="feed__button-area"><button class="radio__button" value="1000"></button></li>
+						<li class="feed__button-area"><button class="radio__button " value="500"></button></li>
+						<li class="feed__button-area"><button class="radio__button" value="250"></button></li>
+						<li class="feed__button-area"><button class="radio__button active-dot" value="100"></button>
+						</li>
+						<li class="feed__button-area"><button class="radio__button" value="50"></button></li>
+						<li class="feed__button-area"><button class="radio__button" value="25"></button></li>
 					</ul>
 				</div>
 				<div class="line__number">
@@ -139,15 +140,15 @@
 					<span class="number__text">$1000</span>
 					<span class="number__text">$500</span>
 					<span class="number__text">$250</span>
-					<span class="number__text">$100</span>
+					<span class="number__text number__color">$100</span>
 					<span class="number__text">$50</span>
 					<span class="number__text">$25</span>
 				</div>
 			</div>
 			<form>
 				<div class="feed__input">
-					<input class="donate__input" type="number" oninput="if (value.length>= 5) value = value.slice (0,4)" min="1"
-						max="9999" placeholder="Another amount" required>
+					<input class="donate__input" type="number" min="1" max="9999" placeholder="Another amount" value="100"
+						required>
 				</div>
 				<div class="feed__radio">
 					<input class="radio" type="radio" name="radio" value="Monthly" id="monthly">
@@ -234,8 +235,7 @@
 			</div>
 		</div>
 	</footer>
-
-	<script src="../main/script.js"></script>
+	<script src="./script.js"></script>
 </body>
 
 </html>
