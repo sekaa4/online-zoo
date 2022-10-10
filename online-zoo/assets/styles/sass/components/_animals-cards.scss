@@ -22,6 +22,7 @@
 	@include media-mobile {
 		padding: 34px 0 60px 0;
 		height: 1556px;
+
 		background: url("../../assets/images/Third-section/palm_foto_laptop.png") bottom 1px left -10px/68px 72.5px,
 			url("../../assets/images/Third-section/strelitzia 1_laptop.png") bottom -1px right -19px/87px 63px;
 		background-repeat: no-repeat;
@@ -31,7 +32,8 @@
 .animal {
 	@extend %transition;
 	box-sizing: border-box;
-	display: block;
+	display: none;
+	flex-shrink: 0;
 	width: 366px;
 	height: 426px;
 	border: 1px solid transparent; //Обводка нужной толщины, но прозрачная
@@ -92,19 +94,31 @@
 .animals-card__wrapper {
 	width: 1158px;
 	height: 872px;
+	overflow-y: hidden;
+	z-index: 1;
+
+	@include media-small-laptop {
+		max-width: 940px;
+		margin: 0 auto;
+		height: 800px;
+	}
 
 	@include media-tablet {
 		height: 756px;
+		max-width: 600px;
+		margin: 0 auto;
 	}
 
 	@include media-mobile {
 		height: 1388px;
+		max-width: 300px;
 	}
 }
 
 .animals-card-wrapper {
 	position: relative;
 	height: 872px;
+
 	@include media-small-laptop {
 		height: 800px;
 	}
@@ -177,8 +191,8 @@
 .animals-card-button {
 	width: 29.8rem;
 	margin: 80px auto 100px auto;
-	@include media-small-laptop {
-		margin: 9px auto 0 auto;
+	@include media-tablet {
+		margin: 60px auto 100px auto;
 	}
 
 	@include media-mobile {
@@ -194,8 +208,16 @@
 
 .animals-card__navigation-wrapper {
 	position: relative;
+	height: 872px;
+	margin: 0 auto;
+	z-index: 1;
+
+	@include media-small-laptop {
+		height: 800px;
+	}
 
 	@include media-tablet {
+		max-width: 600px;
 		height: 756px;
 		margin-bottom: 60px;
 	}
@@ -203,26 +225,5 @@
 	@include media-mobile {
 		height: 1388px;
 		margin-bottom: 20px;
-	}
-}
-
-.animal__number1,
-.animal__number2 {
-	@include media-tablet {
-		order: 1;
-	}
-}
-
-.animal__number5,
-.animal__number6 {
-	@include media-tablet {
-		order: 4;
-	}
-}
-
-.animal__number7,
-.animal__number8 {
-	@include media-tablet {
-		display: none;
 	}
 }

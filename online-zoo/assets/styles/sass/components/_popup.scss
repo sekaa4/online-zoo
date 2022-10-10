@@ -1,0 +1,125 @@
+%close-line {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background: $color-white;
+	border-radius: 2px;
+}
+
+.testimonial__popup {
+	animation: slide 0.5s;
+	display: block;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 4;
+
+	@include media-mobile {
+		max-width: 300px;
+		width: 300px;
+	}
+}
+
+.testimonial__popup-background {
+	position: absolute;
+	top: 0;
+	left: 26%;
+	width: 320px;
+	height: 428px;
+	background: rgba(245, 247, 246, 0.7);
+	z-index: 5;
+
+	@include media-mobile {
+		top: 0%;
+		left: 0%;
+	}
+}
+
+.testimonial__popup-wrapper {
+	position: relative;
+	display: inline-block;
+	top: 0;
+	left: 26%;
+	width: 320px;
+	height: 428px;
+	z-index: 6;
+
+	@include media-mobile {
+		top: 0%;
+		left: 0%;
+	}
+}
+
+.testimonial-article {
+	display: block;
+	position: absolute;
+	z-index: 6;
+	box-sizing: border-box;
+	height: 391px;
+	width: 268px;
+	top: 50%;
+	left: -52%;
+	transform: translate(68%, -50%);
+	border: 2px solid transparent; //Обводка нужной толщины, но прозрачная
+	background: linear-gradient(
+			315.75deg,
+			rgba(254, 189, 171, 0.74) 30.06%,
+			rgba(243, 169, 248, 0.66) 50.74%,
+			#e0d8f0 80.49%,
+			#eaf7fe 127.9%,
+			#eaf7fe 149.54%
+		),
+		linear-gradient(
+			315.75deg,
+			rgba(254, 189, 171, 0.74) 30.06%,
+			rgba(243, 169, 248, 0.66) 50.74%,
+			#e0d8f0 80.49%,
+			#eaf7fe 127.9%,
+			#eaf7fe 149.54%
+		); //Нужный градиент в качестве фона
+	box-shadow: inset 0px 0px 0px 100vw #f1f3f2; //Тень направленная внутрь контейнера, перекрывает ненужный фон и оставляет только рамку
+	border-radius: 20px;
+	padding: 14px 15px 19px 14px;
+
+	@include media-small-laptop {
+	}
+}
+
+.testimonial-article__text {
+	@include font($size: 1.5rem, $height: 1.2, $weight: 300);
+	box-sizing: border-box;
+	overflow: scroll;
+	width: 237px;
+	height: 309px;
+	color: #767474;
+	margin-top: 10px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.popup__close {
+	display: inline-block;
+	top: 0%;
+	left: 89%;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	cursor: pointer;
+
+	&:before {
+		@extend %close-line;
+		background: orange;
+		top: 50%;
+		transform: rotate(45deg);
+	}
+
+	&:after {
+		@extend %close-line;
+		background: orange;
+		top: 50%;
+		transform: rotate(-45deg);
+	}
+}

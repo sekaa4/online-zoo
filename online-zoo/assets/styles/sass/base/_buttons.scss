@@ -54,16 +54,16 @@
 	}
 	@include media-small-laptop {
 		transform: none;
-		top: 0;
-		left: 0;
-		//transform: translateX(69%);
+		top: 17%;
+		left: 38%;
+		transform: translateX(-50%);
 		background-repeat: no-repeat;
-		margin: 0 0 0 322px;
+		margin: 0;
 	}
 
 	@include media-tablet {
-		order: 2;
-		margin: 0 0 7px 223px;
+		top: 19%;
+		left: 39%;
 	}
 }
 
@@ -81,16 +81,15 @@
 	}
 	@include media-small-laptop {
 		transform: none;
-		top: 0;
-		right: 0;
-		//transform: translateX(18%);
+		top: 50%;
+		right: 34%;
+		transform: translateY(-50%);
 		background-repeat: no-repeat;
-		margin: 0 322px 0 0;
+		margin: 0;
 	}
 
 	@include media-tablet {
-		order: 3;
-		margin: 0 223px 7px 0;
+		right: 40%;
 	}
 }
 

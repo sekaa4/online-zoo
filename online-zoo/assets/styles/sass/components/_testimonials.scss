@@ -63,17 +63,15 @@
 }
 
 .testimonials__wrapper {
-	height: 468px;
+	height: 599px;
+	overflow-x: hidden;
 
 	@include media-small-laptop {
-		height: 468px;
+		height: 602px;
 	}
 
 	@include media-tablet {
 		height: 528px;
-		// padding-top: 61px;
-		// padding-bottom: 80px;
-		// margin: 0 auto;
 	}
 }
 
@@ -96,10 +94,12 @@
 }
 
 .testimonials-wrapper {
+	position: relative;
 	height: 391px;
 
 	@include media-tablet {
 		height: 357px;
+		overflow: scroll;
 	}
 }
 
@@ -119,8 +119,11 @@
 }
 
 .testimonial {
+	display: inline-block;
+	position: relative;
 	box-sizing: border-box;
 	height: 391px;
+	animation: 1s ease;
 	border: 2px solid transparent; //Обводка нужной толщины, но прозрачная
 	background: linear-gradient(
 			315.75deg,
@@ -211,8 +214,7 @@
 	height: 18px;
 }
 
-.testimonial_1,
-.testimonial_2 {
+.testimonial {
 	max-width: 268px;
 
 	@include media-small-laptop {
@@ -224,26 +226,10 @@
 		max-width: 600px;
 		width: 600px;
 	}
-}
 
-.testimonial_3 {
-	max-width: 267px;
-
-	@include media-small-laptop {
-		max-width: 294px;
-		width: 294px;
-	}
-
-	@include media-tablet {
-		max-width: 600px;
-		width: 600px;
-	}
-}
-
-.testimonial_4 {
-	max-width: 266px;
-	@include media-small-laptop {
-		display: none;
+	@include media-mobile {
+		max-width: 300px;
+		width: 300px;
 	}
 }
 
@@ -257,6 +243,10 @@
 	margin-top: 10px;
 	text-align: left;
 	vertical-align: top;
+
+	@include media-small-laptop {
+		width: 260px;
+	}
 
 	@include media-tablet {
 		width: 565px;
@@ -294,4 +284,8 @@
 	@include media-mobile {
 		margin: 29px auto 0 auto;
 	}
+}
+
+.carousel {
+	transition: all 1s ease;
 }

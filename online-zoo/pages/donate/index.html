@@ -146,7 +146,8 @@
 			</div>
 			<form>
 				<div class="feed__input">
-					<input class="donate__input" type="number" min="1" max="9999" placeholder="Another amount" required>
+					<input class="donate__input" type="number" oninput="if (value.length>= 5) value = value.slice (0,4)" min="1"
+						max="9999" placeholder="Another amount" required>
 				</div>
 				<div class="feed__radio">
 					<input class="radio" type="radio" name="radio" value="Monthly" id="monthly">
